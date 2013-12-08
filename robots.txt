@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://decklord.github.io/sitemap.xml 
