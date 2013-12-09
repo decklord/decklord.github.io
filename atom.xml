@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-08T23:10:01-03:00</updated>
+  <updated>2013-12-08T23:40:21-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -12,6 +12,89 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Guardar y cargar cookies en Objective-C]]></title>
+    <link href="http://decklord.github.io/blog/2013/09/11/how-to-save-and-load-cookies-on-objective-c-when/"/>
+    <updated>2013-09-11T21:06:59-03:00</updated>
+    <id>http://decklord.github.io/blog/2013/09/11/how-to-save-and-load-cookies-on-objective-c-when</id>
+    <content type="html"><![CDATA[<p>Por lo que he visto, cargar y guardar cookies para persistir sesiones en un
+servidor remoto es un tema muy recurrente en Objective-C.</p>
+
+<p>Navegando en las preguntas de StackOverflow me encontre con alguien que pedía
+<a href="http://stackoverflow.com/questions/14387662/afnetworking-persisting-cookies-automatically/14405805#14405805">justamente eso</a>
+a lo cual le respondí, por lo que aprovecho de compartir el snipet acá en un post.</p>
+
+<p>Usualmente el servidor remoto nos envia un <em>hash</em> de la sesión en los headers de
+la respuesta HTTP. El objetivo es almacenar este valor en cookies dentro del
+dispositivo para usarlo más tarde.</p>
+
+<p>La típica situación para esto es, por ejemplo, un login. Luego de que la sessión se
+acepta es importante almacenar la cookie pues de lo contrario, al abrir nuevamente
+la app, perderemos la sesión.</p>
+
+<!-- more -->
+
+
+<p>Lo anterior se puede lograr utilizando <em>NSKeyedUnarchiver</em> y <em>NSKeyedArchived</em>.</p>
+
+<p>Para guardar la sesión:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">saveCookies</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSHTTPCookieStorage</span> <span class="o">*</span><span class="n">storage</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSHTTPCookieStorage</span> <span class="n">sharedHTTPCookieStorage</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSData</span> <span class="o">*</span><span class="n">cookiesData</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSKeyedArchiver</span> <span class="nl">archivedDataWithRootObject:</span> <span class="p">[</span><span class="n">storage</span> <span class="n">cookies</span><span class="p">]];</span>
+</span><span class='line'>    <span class="n">NSUserDefaults</span> <span class="o">*</span><span class="n">defaults</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">defaults</span> <span class="nl">setObject:</span> <span class="n">cookiesData</span> <span class="nl">forKey:</span> <span class="s">@&quot;sessionCookies&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">defaults</span> <span class="n">synchronize</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este método se debe invocar después de que recibimos la respuesta del servidor.
+Por otra parte, cuando iniciamos la App es necesario cargar esta info:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadCookies</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSUserDefaults</span> <span class="o">*</span><span class="n">userDefaults</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSData</span> <span class="o">*</span><span class="n">sessionCookies</span> <span class="o">=</span> <span class="p">[</span><span class="n">userDefaults</span> <span class="nl">objectForKey:</span><span class="s">@&quot;sessionCookies&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSArray</span> <span class="o">*</span><span class="n">cookies</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSKeyedUnarchiver</span> <span class="nl">unarchiveObjectWithData:</span><span class="n">sessionCookies</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSHTTPCookieStorage</span> <span class="o">*</span><span class="n">cookieStorage</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSHTTPCookieStorage</span> <span class="n">sharedHTTPCookieStorage</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">NSHTTPCookie</span> <span class="o">*</span><span class="n">cookie</span> <span class="k">in</span> <span class="n">cookies</span><span class="p">){</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">cookieStorage</span> <span class="nl">setCookie:</span> <span class="n">cookie</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En este caso, lo ideal es llamar este método en el <em>App Delegate</em> al comienzo de
+la app.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[enumerateObjectsUsingBlock, loops prácticos en Objective-C]]></title>
@@ -29,23 +112,28 @@ acerca de <em>enumerators</em>. En el mencionaban como hacer un loop usando <str
 
 <p>La típica forma de iterar sobre un objeto es la siguiente:</p>
 
-<div>
-  <pre><code class='objective-c'>NSArray *someArray = [[NSArray alloc] init];
-for (int i = 0; i&lt;100; i++) {
-    NSObject *object = [someArray objectAtIndex:i];
-}</code></pre>
-</div>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">someArray</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSArray</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="o">=</span> <span class="p">[</span><span class="n">someArray</span> <span class="nl">objectAtIndex:</span><span class="n">i</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Lo malo es que esta forma es un poco engorrosa, pues hay que buscar el
 objeto usando el <em>índice <strong>i</strong></em>. Cuando no nos importa usar el índice lo ideal
 es utilizar el modo <em>&ldquo;forin&rdquo;</em>.</p>
 
-<div>
-  <pre><code class='objective-c'>for (NSObject *object in someArray) {
-    [object someMethod];
-}</code></pre>
-</div>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="k">in</span> <span class="n">someArray</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">object</span> <span class="n">someMethod</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Esta forma es mucho mas sencilla y limpia, utiliza <em>NSFastEnumeration</em> en su
@@ -56,14 +144,19 @@ Objective-C, incluso mas rápido que usar un <em>for/while</em> en C.</p>
 utilizar el índice? Volvemos a algo similar al primer ejemplo, o incluso peor.
 Se define el indice fuera del ciclo, de la siguiente manera:</p>
 
-<div>
-  <pre><code class='objective-c'>int i = 0;
-for (NSObject *object in someArray) {
-    [object someMethod];
-    //Do something with i
-    i += 1;
-}</code></pre>
-</div>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="k">in</span> <span class="n">someArray</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">object</span> <span class="n">someMethod</span><span class="p">];</span>
+</span><span class='line'>    <span class="c1">//Do something with i</span>
+</span><span class='line'>    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Una forma más limpia</h2>
@@ -71,11 +164,13 @@ for (NSObject *object in someArray) {
 <p>En Objective-C existe una forma de declarar el índice y tener el objeto en
 una sola línea, esto se hace utilizando <strong>enumerateObjectsUsingBlock</strong>.</p>
 
-<div>
-  <pre><code class='objective-c'>[someArray enumerateObjectsUsingBlock:^(id object, NSUInteger i, BOOL *stop) {
-    NSLog(@&quot;%@&quot;, object);
-}];</code></pre>
-</div>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">someArray</span> <span class="nl">enumerateObjectsUsingBlock:</span><span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">object</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">i</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">object</span><span class="p">);</span>
+</span><span class='line'><span class="p">}];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Esta disponible para <em>NSArray, NSSet, NSDictionary y NSIndexSet</em>. Con esta
@@ -86,9 +181,9 @@ tenga el valor <em>True</em>.</p>
 
 <p>Una característica interesante de enumerateObjectsUsingBlock es su variante:</p>
 
-<div>
-  <pre><code class='objective-c'>enumerateObjectsWithOptions:usingBlock:</code></pre>
-</div>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="nl">enumerateObjectsWithOptions:usingBlock:</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>La cual puede recibir un parámetro de tipo <em>NSEnumerationOptions</em>.
