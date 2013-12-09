@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Camilo López A.</title>
+  <meta name="author" content="Camilo López A.">
 
   
-  <meta name="description" content="Hoy tuve que mostrar una aplicación para iPhone a un cliente remoto, la idea
-era que probaran la aplicación en su dispositivo móvil antes de subir &hellip;">
+  <meta name="description" content="Hace unos días estaba leyendo NSHipster de
+Matt Thompson y descubrí un buen post
+acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +23,7 @@ era que probaran la aplicación en su dispositivo móvil antes de subir &hellip;
   <link rel="canonical" href="http://decklord.github.io">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Camilo López A." type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -32,14 +33,26 @@ era que probaran la aplicación en su dispositivo móvil antes de subir &hellip;
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42386279-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Camilo López A.</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Si, este es mi blog de programación y otras hiervas</h2>
   
 </hgroup>
 
@@ -72,7 +85,50 @@ era que probaran la aplicación en su dispositivo móvil antes de subir &hellip;
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Como Cargar Tu App en Un iPhone Usando iTunes</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/">enumerateObjectsUsingBlock, loops prácticos en Objective-C</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-11T20:06:59-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hace unos días estaba leyendo <a href="http://nshipster.com/">NSHipster</a> de
+<a href="http://mattt.me/">Matt Thompson</a> y descubrí un buen post
+acerca de <em>enumerators</em>. En el mencionaban como hacer un loop usando <strong>enumerateObjectsUsingBlock</strong>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/">Seguir leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Como cargar tu app en un iPhone usando iTunes</a></h1>
     
     
       <p class="meta">
@@ -108,66 +164,12 @@ a la AppStore.</p>
 llevar la aplicación al teléfono, por lo que en este post explicaré como hacer
 el proceso utilizando sólo iTunes.</p>
 
-<h2>Agregando el dispositivo al Provisioning Profile</h2>
-
-<p>Lo primero es asegurarnos que el dispositivo del cliente esta en el
-<strong>Provisioning Profile</strong>. Para ello
-<a href="http://bjango.com/help/iphoneudid/">necesitamos su UDID</a>.</p>
-
-<p>Teniendo el identificador del dispositivo, lo agregamos en
-<a href="http://developers.apple.com">http://developers.apple.com</a>
-como se indica en esta pregunta de
-<a href="http://stackoverflow.com/questions/3578158/adding-devices-to-team-provisioning-profile">Stack Overflow</a>.</p>
-
-<h2>Generando el archivo IPA</h2>
-
-<p>Lo segundo es generar un
-<a href="http://en.wikipedia.org/wiki/.ipa_(file_extension)">archivo IPA</a> con tu App,
-para ello realizaremos lo siguiente:</p>
-
-<p>Ir a XCode y seleccionar <strong>iOS Device</strong> en la lista de dispositivos
-como en la imagen.</p>
-
-<p><img src="images/posts/2013_07_11_1.png" alt="" /></p>
-
-<p>Luego ir a la pestaña de <strong>Product</strong> y elegir <strong>Archive</strong> como en la foto.</p>
-
-<p><img src="images/posts/2013_07_11_2.png" alt="" /></p>
-
-<p>XCode compilará la aplicación y al finalizar, tu App aparecerá archivada en la
-pestaña  <strong>Archive</strong> en el <strong>Organizer</strong> de XCode. Si todo esta en orden, hacer click
- en <strong>Distribute</strong>.</p>
-
-<p><img src="images/posts/2013_07_11_3.png" alt="" /></p>
-
-<p>Aparecerá una pantalla donde se pregunta como distribuir tu aplicación, en ella
-elegimos <strong>Save for Enterprise or Ad-Hoc Deplyment</strong>. Luego seguir las
-instrucciones y guardar el archivo IPA.</p>
-
-<p><img src="images/posts/2013_07_11_4.png" alt="" /></p>
-
-<h2>Cargando la App con iTunes</h2>
-
-<p>Con el archivo IPA localizado, abrir <strong>iTunes</strong> e ir a <strong>File > Add to
-Library &hellip;</strong>* o presiona ⌘+O y elige el archivo <strong>.ipa</strong>.</p>
-
-<p><img src="images/posts/2013_07_11_5.png" alt="" /></p>
-
-<p>Ahora conecta el dispositivo, espera a la sincronización y luego hacer click en
-en el botón de iPhone como en la imagen y luego ir a la pestaña <strong>Apps</strong> en la
-sección de iPhone.</p>
-
-<p><img src="images/posts/2013_07_11_6.png" alt="" /></p>
-
-<p>Finalmente encuentra tu app, la instalamos:</p>
-
-<p><img src="images/posts/2013_07_11_7.png" alt="" /></p>
-
-<p>y le damos al botón <strong>Sync</strong>.</p>
-
-<p><img src="images/posts/2013_07_11_8.png" alt="" /></p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Seguir leyendo &rarr;</a>
+    </footer>
   
 
 
@@ -186,10 +188,43 @@ sección de iPhone.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Como Cargar Tu App en Un iPhone Usando iTunes</a>
+        <a href="/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/">enumerateObjectsUsingBlock, loops prácticos en Objective-C</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Como cargar tu app en un iPhone usando iTunes</a>
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/decklord">@decklord</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'decklord',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
@@ -202,7 +237,7 @@ sección de iPhone.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
+  Copyright &copy; 2013 - Camilo López A. -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -210,6 +245,15 @@ sección de iPhone.</p>
   
 
 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 

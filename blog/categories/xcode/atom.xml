@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: XCode | My Octopress Blog]]></title>
+  <title><![CDATA[Category: XCode | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/xcode/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-08T22:23:57-03:00</updated>
+  <updated>2013-12-08T23:10:01-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Camilo López A.]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Como Cargar Tu App en Un iPhone Usando iTunes]]></title>
+    <title type="html"><![CDATA[Como cargar tu app en un iPhone usando iTunes]]></title>
     <link href="http://decklord.github.io/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/"/>
     <updated>2013-07-11T19:06:59-04:00</updated>
     <id>http://decklord.github.io/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes</id>
@@ -30,6 +30,9 @@ a la AppStore.</p>
 <p>A modo didáctico quise entender que es lo que hacen estas aplicaciones para
 llevar la aplicación al teléfono, por lo que en este post explicaré como hacer
 el proceso utilizando sólo iTunes.</p>
+
+<!-- more -->
+
 
 <h2>Agregando el dispositivo al Provisioning Profile</h2>
 

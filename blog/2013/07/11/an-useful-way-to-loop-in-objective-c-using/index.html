@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Camilo López A.</title>
+  <title>enumerateObjectsUsingBlock, loops prácticos en Objective-C - Camilo López A.</title>
   <meta name="author" content="Camilo López A.">
 
   
-  <meta name="description" content="Blog Archive 2013 enumerateObjectsUsingBlock, loops prácticos en Objective-C
-Jul 11 2013 Como cargar tu app en un iPhone usando iTunes
-Jul 11 2013 &hellip;">
+  <meta name="description" content="Hace unos días estaba leyendo NSHipster de
+Matt Thompson y descubrí un buen post
+acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ Jul 11 2013 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://decklord.github.io/blog/archives">
+  <link rel="canonical" href="http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Camilo López A." type="application/atom+xml">
@@ -78,45 +78,155 @@ Jul 11 2013 &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">enumerateObjectsUsingBlock, loops prácticos en Objective-C</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-11T20:06:59-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Hace unos días estaba leyendo <a href="http://nshipster.com/">NSHipster</a> de
+<a href="http://mattt.me/">Matt Thompson</a> y descubrí un buen post
+acerca de <em>enumerators</em>. En el mencionaban como hacer un loop usando <strong>enumerateObjectsUsingBlock</strong>.</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/">enumerateObjectsUsingBlock, loops prácticos en Objective-C</a></h1>
-<time datetime="2013-07-11T20:06:59-04:00" pubdate><span class='month'>Jul</span> <span class='day'>11</span> <span class='year'>2013</span></time>
+<!-- more -->
 
 
-</article>
+<h2>Iterando sobre objetos</h2>
 
+<p>La típica forma de iterar sobre un objeto es la siguiente:</p>
 
-
-<article>
-  
-<h1><a href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/">Como cargar tu app en un iPhone usando iTunes</a></h1>
-<time datetime="2013-07-11T19:06:59-04:00" pubdate><span class='month'>Jul</span> <span class='day'>11</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/xcode/'>XCode</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/itunes/'>iTunes</a></span>
-</footer>
-
-
-</article>
-
+<div>
+  <pre><code class='objective-c'>NSArray *someArray = [[NSArray alloc] init];
+for (int i = 0; i&lt;100; i++) {
+    NSObject *object = [someArray objectAtIndex:i];
+}</code></pre>
 </div>
 
+
+<p>Lo malo es que esta forma es un poco engorrosa, pues hay que buscar el
+objeto usando el <em>índice <strong>i</strong></em>. Cuando no nos importa usar el índice lo ideal
+es utilizar el modo <em>&ldquo;forin&rdquo;</em>.</p>
+
+<div>
+  <pre><code class='objective-c'>for (NSObject *object in someArray) {
+    [object someMethod];
+}</code></pre>
+</div>
+
+
+<p>Esta forma es mucho mas sencilla y limpia, utiliza <em>NSFastEnumeration</em> en su
+implementación, la cual es la manera más rápida de iterar sobre un objeto en
+Objective-C, incluso mas rápido que usar un <em>for/while</em> en C.</p>
+
+<p>Ahora bien, ¿qué pasa cuando queremos usar este tipo de <em>for</em> y además queremos
+utilizar el índice? Volvemos a algo similar al primer ejemplo, o incluso peor.
+Se define el indice fuera del ciclo, de la siguiente manera:</p>
+
+<div>
+  <pre><code class='objective-c'>int i = 0;
+for (NSObject *object in someArray) {
+    [object someMethod];
+    //Do something with i
+    i += 1;
+}</code></pre>
+</div>
+
+
+<h2>Una forma más limpia</h2>
+
+<p>En Objective-C existe una forma de declarar el índice y tener el objeto en
+una sola línea, esto se hace utilizando <strong>enumerateObjectsUsingBlock</strong>.</p>
+
+<div>
+  <pre><code class='objective-c'>[someArray enumerateObjectsUsingBlock:^(id object, NSUInteger i, BOOL *stop) {
+    NSLog(@&quot;%@&quot;, object);
+}];</code></pre>
+</div>
+
+
+<p>Esta disponible para <em>NSArray, NSSet, NSDictionary y NSIndexSet</em>. Con esta
+manera nos olvidamos de declarar variables auxiliares.</p>
+
+<p>El equivalente al <em>break</em> en este tipo de loops en hacer que la variable <em>stop</em>
+tenga el valor <em>True</em>.</p>
+
+<p>Una característica interesante de enumerateObjectsUsingBlock es su variante:</p>
+
+<div>
+  <pre><code class='objective-c'>enumerateObjectsWithOptions:usingBlock:</code></pre>
+</div>
+
+
+<p>La cual puede recibir un parámetro de tipo <em>NSEnumerationOptions</em>.
+Se puede, entre otras cosas, revertir el orden en el que se recorren los
+elementos usando <em>NSEnumerationReverse</em>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Camilo López A.</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-11T20:06:59-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/" data-via="_clopez" data-counturl="http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/" title="Previous Post: Como cargar tu app en un iPhone usando iTunes">&laquo; Como cargar tu app en un iPhone usando iTunes</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

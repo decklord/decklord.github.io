@@ -1,20 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-08T22:23:57-03:00</updated>
+  <updated>2013-12-08T23:10:01-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Camilo López A.]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Como Cargar Tu App en Un iPhone Usando iTunes]]></title>
+    <title type="html"><![CDATA[enumerateObjectsUsingBlock, loops prácticos en Objective-C]]></title>
+    <link href="http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/"/>
+    <updated>2013-07-11T20:06:59-04:00</updated>
+    <id>http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using</id>
+    <content type="html"><![CDATA[<p>Hace unos días estaba leyendo <a href="http://nshipster.com/">NSHipster</a> de
+<a href="http://mattt.me/">Matt Thompson</a> y descubrí un buen post
+acerca de <em>enumerators</em>. En el mencionaban como hacer un loop usando <strong>enumerateObjectsUsingBlock</strong>.</p>
+
+<!-- more -->
+
+
+<h2>Iterando sobre objetos</h2>
+
+<p>La típica forma de iterar sobre un objeto es la siguiente:</p>
+
+<div>
+  <pre><code class='objective-c'>NSArray *someArray = [[NSArray alloc] init];
+for (int i = 0; i&lt;100; i++) {
+    NSObject *object = [someArray objectAtIndex:i];
+}</code></pre>
+</div>
+
+
+<p>Lo malo es que esta forma es un poco engorrosa, pues hay que buscar el
+objeto usando el <em>índice <strong>i</strong></em>. Cuando no nos importa usar el índice lo ideal
+es utilizar el modo <em>&ldquo;forin&rdquo;</em>.</p>
+
+<div>
+  <pre><code class='objective-c'>for (NSObject *object in someArray) {
+    [object someMethod];
+}</code></pre>
+</div>
+
+
+<p>Esta forma es mucho mas sencilla y limpia, utiliza <em>NSFastEnumeration</em> en su
+implementación, la cual es la manera más rápida de iterar sobre un objeto en
+Objective-C, incluso mas rápido que usar un <em>for/while</em> en C.</p>
+
+<p>Ahora bien, ¿qué pasa cuando queremos usar este tipo de <em>for</em> y además queremos
+utilizar el índice? Volvemos a algo similar al primer ejemplo, o incluso peor.
+Se define el indice fuera del ciclo, de la siguiente manera:</p>
+
+<div>
+  <pre><code class='objective-c'>int i = 0;
+for (NSObject *object in someArray) {
+    [object someMethod];
+    //Do something with i
+    i += 1;
+}</code></pre>
+</div>
+
+
+<h2>Una forma más limpia</h2>
+
+<p>En Objective-C existe una forma de declarar el índice y tener el objeto en
+una sola línea, esto se hace utilizando <strong>enumerateObjectsUsingBlock</strong>.</p>
+
+<div>
+  <pre><code class='objective-c'>[someArray enumerateObjectsUsingBlock:^(id object, NSUInteger i, BOOL *stop) {
+    NSLog(@&quot;%@&quot;, object);
+}];</code></pre>
+</div>
+
+
+<p>Esta disponible para <em>NSArray, NSSet, NSDictionary y NSIndexSet</em>. Con esta
+manera nos olvidamos de declarar variables auxiliares.</p>
+
+<p>El equivalente al <em>break</em> en este tipo de loops en hacer que la variable <em>stop</em>
+tenga el valor <em>True</em>.</p>
+
+<p>Una característica interesante de enumerateObjectsUsingBlock es su variante:</p>
+
+<div>
+  <pre><code class='objective-c'>enumerateObjectsWithOptions:usingBlock:</code></pre>
+</div>
+
+
+<p>La cual puede recibir un parámetro de tipo <em>NSEnumerationOptions</em>.
+Se puede, entre otras cosas, revertir el orden en el que se recorren los
+elementos usando <em>NSEnumerationReverse</em>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como cargar tu app en un iPhone usando iTunes]]></title>
     <link href="http://decklord.github.io/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/"/>
     <updated>2013-07-11T19:06:59-04:00</updated>
     <id>http://decklord.github.io/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes</id>
@@ -30,6 +114,9 @@ a la AppStore.</p>
 <p>A modo didáctico quise entender que es lo que hacen estas aplicaciones para
 llevar la aplicación al teléfono, por lo que en este post explicaré como hacer
 el proceso utilizando sólo iTunes.</p>
+
+<!-- more -->
+
 
 <h2>Agregando el dispositivo al Provisioning Profile</h2>
 
