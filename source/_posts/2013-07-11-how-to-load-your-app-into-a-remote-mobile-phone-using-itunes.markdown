@@ -41,41 +41,41 @@ para ello realizaremos lo siguiente:
 Ir a XCode y seleccionar **iOS Device** en la lista de dispositivos 
 como en la imagen.
 
-![](images/posts/2013_07_11_1.png)
+![](/images/posts/2013_07_11_1.png)
 
 Luego ir a la pestaña de **Product** y elegir **Archive** como en la foto.
 
-![](images/posts/2013_07_11_2.png)
+![](/images/posts/2013_07_11_2.png)
 
 XCode compilará la aplicación y al finalizar, tu App aparecerá archivada en la 
 pestaña  **Archive** en el **Organizer** de XCode. Si todo esta en orden, hacer click
  en **Distribute**.
 
-![](images/posts/2013_07_11_3.png)
+![](/images/posts/2013_07_11_3.png)
 
 Aparecerá una pantalla donde se pregunta como distribuir tu aplicación, en ella 
 elegimos **Save for Enterprise or Ad-Hoc Deplyment**. Luego seguir las 
 instrucciones y guardar el archivo IPA.
 
-![](images/posts/2013_07_11_4.png)
+![](/images/posts/2013_07_11_4.png)
 
 ##Cargando la App con iTunes
 
 Con el archivo IPA localizado, abrir **iTunes** e ir a **File > Add to 
 Library ...*** o presiona ⌘+O y elige el archivo **.ipa**.
 
-![](images/posts/2013_07_11_5.png)
+![](/images/posts/2013_07_11_5.png)
 
 Ahora conecta el dispositivo, espera a la sincronización y luego hacer click en 
 en el botón de iPhone como en la imagen y luego ir a la pestaña **Apps** en la 
 sección de iPhone.
 
-![](images/posts/2013_07_11_6.png)
+![](/images/posts/2013_07_11_6.png)
 
 Finalmente encuentra tu app, la instalamos:
 
-![](images/posts/2013_07_11_7.png)
+![](/images/posts/2013_07_11_7.png)
 
 y le damos al botón **Sync**.
 
-![](images/posts/2013_07_11_8.png)
+![](/images/posts/2013_07_11_8.png)
