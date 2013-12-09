@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nic.cl | Camilo López A.]]></title>
+  <link href="http://decklord.github.io/blog/categories/nic-dot-cl/atom.xml" rel="self"/>
+  <link href="http://decklord.github.io/"/>
+  <updated>2013-12-09T12:32:09-03:00</updated>
+  <id>http://decklord.github.io/</id>
+  <author>
+    <name><![CDATA[Camilo López A.]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando GitHub Pages con nic.cl]]></title>
+    <link href="http://decklord.github.io/blog/2013/12/09/configurando-github-pages-con-nic-dot-cl/"/>
+    <updated>2013-12-09T11:03:03-03:00</updated>
+    <id>http://decklord.github.io/blog/2013/12/09/configurando-github-pages-con-nic-dot-cl</id>
+    <content type="html"><![CDATA[<p>En estos minutos estoy intenando linkear mi dominio <a href="http://clopez.cl">http://clopez.cl</a>
+a <a href="http://pages.github.com/">GitHub Pages</a>.</p>
+
+<h2>Muerte a Tumblr</h2>
+
+<p>Así es, migre mi blog de Tumblr, pues como plataforma de
+blogging es una real basura. Sirve para fotos, pero escribir en tumblr es
+un asco, el espacio es pequeño y el editor en si es lento, falla y pierdes todo.</p>
+
+<p>La tienes aún peor si quieres escribir un blog de programación, activar
+<a href="http://decklord.tumblr.com/post/60947643317/add-syntax-highlight-to-tumblr">colores en el código</a>
+no es directo y agregar código en sí en el editor html es <em>muy muy tedioso</em>.</p>
+
+<p>Usando una plataforma pésima es malo, hace que escribas menos o directamente que
+no escribas nada.</p>
+
+<!-- more -->
+
+
+<h2>Migrando a Octopress</h2>
+
+<p>Buscando un poco llegue a Octopress, claramente <em>LA opción</em> para desarroladores.
+Usa Markdown syntax para escribir los posts, por lo que puedo usar cualquier
+editor y lo hago en mi equipo.</p>
+
+<p>Montar todo en Octopress tampoco es sencillo, pero si eres desarrollador
+el proceso puede ser entretenido. Una vez que tuve todo configurado para
+funcionar llegue a la parte de &ldquo;¿Ya y ahora como conecto esto a mi dominio
+personal?&rdquo;. Desafortunadamente en <a href="http://www.nic.cl">nic.cl</a> esto no es directo.</p>
+
+<p>En nic hay que configurar los DNS, colocando un nombre de servidor primario y su
+respectiva ip. Por otra parte, GitHub Pages no nos permite hacer esto tampoco.</p>
+
+<p>Usualmente la configuración del dominio es sencillo cuando contratamos un servicio
+de Hosting pagado. Ellos te dicen cual es tu servidor DNS, su ip y en 5 minutos el
+problema esta resuelto.</p>
+
+<p>Evidentemente no quiero pagar nada de eso, pues no usare el espacio de hosting.
+Descubrí entonces que lo que se necesita es un administrador de DNS que actua
+como <em>proxy</em> o nexo entre nic y donde estan los archivos.</p>
+
+<h2>FreeDNS.ws es tu amigo</h2>
+
+<p>Buscando buscando encontre este sitio <a href="http://freedns.ws/">FreeDNS</a>. Lo mejor
+que tiene es que:</p>
+
+<p><img src="http://images1.wikia.nocookie.net/__cb20120228145016/inciclopedia/images/4/4d/Its_free.png" alt="" /></p>
+
+<p>Luego de crear la cuenta, tenemos que agregar una <em>Zona</em>.</p>
+
+<p><img src="/images/posts/2013_12_09_3.png" alt="" /></p>
+
+<p>En mi caso utilizo clopez.cl en <em>Domain Name</em> y como <em>IP Adress</em> hay que poner
+<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages#domains">la ip de GitHub Pages</a>,
+<em>204.232.175.78</em>.</p>
+
+<p>FreeDNS nos provee ahora las ips de servidor NS:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ns1.freedns.ws
+</span><span class='line'>ns2.freedns.ws</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>En nic nos piden la ip de dicho servicio, esto es facil de obtener, lo hacemos
+con el comando ping en la terminal.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ping ns1.freedns.ws</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Deberíamos ver algo como esto</p>
+
+<p><img src="/images/posts/2013_12_09_1.png" alt="" /></p>
+
+<p>Ahí esta, la ip de FreeDNS es 188.190.119.10 para el ns1. Obtenemos la otra IP
+haciendo lo mismo y en el panel de nic ingresamos los datos:</p>
+
+<p><img src="/images/posts/2013_12_09_2.png" alt="" /></p>
+
+<p>Son las 12:25 cuando termine de realizar estas configuraciones, en total el proceso
+tomo X horas en completar.</p>
+]]></content>
+  </entry>
+  
+</feed>
