@@ -3,7 +3,7 @@ layout: post
 title: "Como cargar tu app en un iPhone usando iTunes"
 date: 2013-07-11 20:06:59 -0300
 comments: true
-categories: iTunes, iOS, XCode
+categories: iTunes iOS XCode
 ---
 
 Hoy tuve que mostrar una aplicación para iPhone a un cliente remoto, la idea 
@@ -18,6 +18,8 @@ Para realizar este proceso existen aplicaciones como
 A modo didáctico quise entender que es lo que hacen estas aplicaciones para
 llevar la aplicación al teléfono, por lo que en este post explicaré como hacer
 el proceso utilizando sólo iTunes.
+
+<!-- more -->
 
 ##Agregando el dispositivo al Provisioning Profile
 
