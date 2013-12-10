@@ -85,5 +85,6 @@ haciendo lo mismo y en el panel de nic ingresamos los datos:
 
 ![](/images/posts/2013_12_09_2.png)
 
+Y ahora a esperar, puede tardar unas horas en aparecer tu dominio.
 Fin!
 
