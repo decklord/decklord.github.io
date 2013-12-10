@@ -85,6 +85,5 @@ haciendo lo mismo y en el panel de nic ingresamos los datos:
 
 ![](/images/posts/2013_12_09_2.png)
 
-Son las 12:25 cuando termine de realizar estas configuraciones, en total el proceso
-tomo X horas en completar.
+Fin!
 
