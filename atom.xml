@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T19:47:29-03:00</updated>
+  <updated>2013-12-22T19:59:15-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -66,7 +66,7 @@ formulario de registro y me llega el usuario junto con el email:</p>
 
 
 <p>En el ejemplo anterior, la segunda validación de email es una expresión regular
-que nos valida si el correo tiene el formato correcto. En validaciones de email
+que valida si el correo tiene el formato correcto. En validaciones de email
 esto es muy común por lo tanto <em>inferimos</em> que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos
 enfrentamos a contextos desconocidos, el caso del email es la excepción a la regla.</p>
@@ -111,12 +111,12 @@ enfrentamos a contextos desconocidos, el caso del email es la excepción a la re
 
 
 <p>Acá hay varias cosas que notar. Lo primero es que encapsulamos la lógica de
-validación en una función. Esto nos permite usar simplemente la función en
+validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad.</p>
 
-<p>Por otra parte, la función de validación <em>tiene un nombre que revela su
-propósito</em>, esto es clave, nos permite leer la condición y determinar
-inmediatamente lo que hace el código. En este caso la función recibe un texto
+<p>Por otra parte, <em>email_formatted</em> de validación <em>tiene un nombre que revela su
+propósito</em>, esto es clave, ya que permite leer la condición y determinar
+inmediatamente lo que hace el código. En el ejempo, éste recibe un texto
 y revisa si es <em>email formatted</em>, es decir, tiene formato de correo y se aplica
 sobre un string cualquiera. Más aún, al poner este nombre en la condición, se
 lee literalmente en inglés: <em>not email formatted</em>.</p>
@@ -233,8 +233,8 @@ por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>La función <em>code_formatted</em> en otros contextos no es trivial de inferir. Hacer
-estas separaciones nos permiten tener una visión mucho más clara de qué se debe
+<p>El método <em>code_formatted</em> en otros contextos no es trivial de inferir. Hacer
+estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
 refactorizar y cómo.</p>
 
 <p>Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
