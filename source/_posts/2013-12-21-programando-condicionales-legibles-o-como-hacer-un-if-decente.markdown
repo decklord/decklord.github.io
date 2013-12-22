@@ -18,6 +18,9 @@ definimos malos condicionales hacemos que el código tienda a tener errores y
 por otro lado dificulta su mantenibilidad, lo cual es tanto o más importante 
 que lo anterior.
 
+De esto se pueden escribir libros enteros, pero tocare algunas cosas que a mi
+parecer son claves de considerar.
+
 <!-- more -->
 
 ###Condiciones engorrosas
