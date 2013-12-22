@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mantenibilidad | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/mantenibilidad/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T19:42:08-03:00</updated>
+  <updated>2013-12-22T19:47:29-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -29,6 +29,9 @@ tiene un impacto incalculable en tu trabajo por dos motivos. El primero es que s
 definimos malos condicionales hacemos que el código tienda a tener errores y
 por otro lado dificulta su mantenibilidad, lo cual es tanto o más importante
 que lo anterior.</p>
+
+<p>De esto se pueden escribir libros enteros, pero tocare algunas cosas que a mi
+parecer son claves de considerar.</p>
 
 <!-- more -->
 
