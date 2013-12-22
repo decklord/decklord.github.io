@@ -4,7 +4,7 @@
   <title><![CDATA[Category: condicionales | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/condicionales/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T20:03:47-03:00</updated>
+  <updated>2013-12-22T20:40:12-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -21,16 +21,16 @@
     <content type="html"><![CDATA[<h3>Los Condicionales</h3>
 
 <p>En la vida del desarrollador es necesario definir muchos condicionales. Con
-condicional me refiero a escribir un <em>if</em> en partes de tu código, lo cual
-ocurre cientos, si no miles de veces en un software.</p>
+<em>condicionales</em> nos refierimos a escribir un <em>if</em> en partes del código, lo cual
+ocurre cientos o incluso miles de veces en un software.</p>
 
 <p>Los condicionales son una pieza clave y si una cosa de este estilo se hace mal
 tiene un impacto incalculable en tu trabajo por dos motivos. El primero es que si
-definimos malos condicionales hacemos que el código tienda a tener errores y
-por otro lado dificulta su mantenibilidad, lo cual es tanto o más importante
-que lo anterior.</p>
+definimos malos condicionales hacemos que el código tienda a tener errores.
+El segundo, por otro lado, es que dificulta su mantenibilidad, lo cual es tanto
+o más importante que lo anterior.</p>
 
-<p>De esto se pueden escribir libros enteros, pero tocare algunas cosas que a mi
+<p>De esto se pueden escribir libros enteros, pero tocaré algunas cosas que a mi
 parecer son claves de considerar.</p>
 
 <!-- more -->
@@ -38,9 +38,9 @@ parecer son claves de considerar.</p>
 
 <h3>Condiciones engorrosas</h3>
 
-<p>Ahora bien, ¿a qué me refiero con escribir <em>buenos</em> o <em>malos</em>
-condicionales? Pongámoslo en un ejemplo, supongamos que quiero validar un
-formulario de registro y me llega el usuario junto con el email:</p>
+<p>Ahora bien, ¿qué implica <em>buenos</em> o <em>malos</em> condicionales? Pongámoslo en un
+ejemplo, supongamos que queremos validar un formulario de registro y nos llega
+el usuario junto con el email:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -75,10 +75,10 @@ formulario de registro y me llega el usuario junto con el email:</p>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>En el ejemplo anterior, la segunda validación de email es una expresión regular
-que valida si el correo tiene el formato correcto. En validaciones de email
-esto es muy común por lo tanto <em>inferimos</em> que se trata de eso. El problema
+que confirma si el correo tiene el formato correcto. En validaciones de email
+esto es muy común, por lo tanto <em>inferimos</em> que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos
-enfrentamos a contextos desconocidos, el caso del email es la excepción a la regla.</p>
+enfrentamos a contextos desconocidos. El caso del email es la excepción a la regla.</p>
 
 <p>¿Cómo se puede hacer esto más legible?</p>
 
@@ -138,16 +138,30 @@ enfrentamos a contextos desconocidos, el caso del email es la excepción a la re
 validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad.</p>
 
-<p>Por otra parte, <em>email_formatted</em> de validación <em>tiene un nombre que revela su
-propósito</em>, esto es clave, ya que permite leer la condición y determinar
-inmediatamente lo que hace el código. En el ejempo, éste recibe un texto
+<p>Por otra parte, el método de validación <em>email_formatted</em> tiene un nombre que
+revela su propósito. Esto es clave, ya que permite leer la condición y determinar
+inmediatamente lo que hace. En el ejempo, éste recibe un texto
 y revisa si es <em>email formatted</em>, es decir, tiene formato de correo y se aplica
-sobre un string cualquiera. Más aún, al poner este nombre en la condición, se
-lee literalmente en inglés: <em>not email formatted</em>.</p>
+sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
+ en inglés: <em>not email formatted</em>.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="ow">not</span> <span class="n">email</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">email_formatted</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Por último y no menos importante, en la función de validación
 separo en una variable la expresión regular, ya que nos ayuda en la legibilidad
-de lo que hacemos al tener dos lineas cortas y claras.</p>
+de lo que hacemos al tener dos líneas cortas y claras.</p>
 
 <h3>Muchas validaciones</h3>
 
@@ -188,9 +202,9 @@ dato, etc. Situaciónes como la siguiente:</p>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>El código anterior tiene varios problemas. Lo primero y mas evidente es que
-se validan muchas condiciones y lo hace difícil de comprender, ni siquiera cabe
-en la pantalla, por lo tanto estamos violando <a href="http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width">la regla de 80 caracteres</a>.
-Por otra parte se repiten cosas en las dos condiciones, solo la última parte es
+se validan muchas condiciones de corrido, esto lo hace difícil de comprender.
+Tampoco cabe en la pantalla, por lo tanto estamos violando <a href="http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width">la regla de 80 caracteres</a>.
+Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
 
 <h4>Agrupando condiciones en variables boolean autoexplicativas</h4>
@@ -224,13 +238,13 @@ variables boolean. Por ejemplo:</p>
 asignándoles un nombre que revele su propósito, como <em>code_has_correct_format</em>.</p>
 
 <p>Por otro lado, se pueden juntar varias condiciones en una variable, siempre y
-cuando pertenezcan a un propósito común. En el caso del ejemplo, todas las
-condiciones que quieren validar el formato se fusionan en un parámetro con un
-nombre adecuado, en este caso: <em>code_has_correct_format</em>.</p>
+cuando pertenezcan a un propósito común. En el ejemplo, todas las
+condiciones que validan el formato se fusionan en un sólo parámetro y se utiliza
+un nombre adecuado: <em>code_has_correct_format</em>.</p>
 
 <p>De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas,
-por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p>
+de esta forma lo separamos en una función cuyo nombre describa su propósito.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -286,10 +300,10 @@ por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p
 estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
 refactorizar y cómo.</p>
 
-<p>Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
-en los condicionales, cómo gracias a eso se puede aplicar <a href="http://es.wikipedia.org/wiki/Leyes_de_De_Morgan">La Ley de Morgan</a>
-de lógica proposicional para hacer mejoras y por qué menos lineas no siempre es
-mejor.</p>
+<p>Eso por ahora, la segunda parte tratará sobre la importancia de ser <em>positivo
+en los condicionales</em>, cómo gracias a eso se puede aplicar <a href="http://es.wikipedia.org/wiki/Leyes_de_De_Morgan">La Ley de Morgan</a>
+de lógica proposicional para hacer mejoras y por qué <em>menos líneas no siempre es
+mejor</em>.</p>
 
 <p>Hasta la próxima.</p>
 ]]></content>
