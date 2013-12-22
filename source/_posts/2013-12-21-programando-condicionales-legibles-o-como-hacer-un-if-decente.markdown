@@ -9,25 +9,25 @@ categories: if else condicionales mantenibilidad
 ###Los Condicionales
 
 En la vida del desarrollador es necesario definir muchos condicionales. Con 
-condicional me refiero a escribir un *if* en partes de tu código, lo cual
-ocurre cientos, si no miles de veces en un software. 
+*condicionales* nos refierimos a escribir un *if* en partes del código, lo cual
+ocurre cientos o incluso miles de veces en un software. 
 
 Los condicionales son una pieza clave y si una cosa de este estilo se hace mal 
 tiene un impacto incalculable en tu trabajo por dos motivos. El primero es que si 
-definimos malos condicionales hacemos que el código tienda a tener errores y 
-por otro lado dificulta su mantenibilidad, lo cual es tanto o más importante 
-que lo anterior.
+definimos malos condicionales hacemos que el código tienda a tener errores. 
+El segundo, por otro lado, es que dificulta su mantenibilidad, lo cual es tanto 
+o más importante que lo anterior.
 
-De esto se pueden escribir libros enteros, pero tocare algunas cosas que a mi
+De esto se pueden escribir libros enteros, pero tocaré algunas cosas que a mi
 parecer son claves de considerar.
 
 <!-- more -->
 
 ###Condiciones engorrosas
 
-Ahora bien, ¿a qué me refiero con escribir *buenos* o *malos* 
-condicionales? Pongámoslo en un ejemplo, supongamos que quiero validar un 
-formulario de registro y me llega el usuario junto con el email:
+Ahora bien, ¿qué implica *buenos* o *malos* condicionales? Pongámoslo en un 
+ejemplo, supongamos que queremos validar un formulario de registro y nos llega 
+el usuario junto con el email:
 
 {% codeblock lang:python %}
 
@@ -45,10 +45,10 @@ def validate_form(data):
 {% endcodeblock %}
 
 En el ejemplo anterior, la segunda validación de email es una expresión regular
-que valida si el correo tiene el formato correcto. En validaciones de email
-esto es muy común por lo tanto *inferimos* que se trata de eso. El problema
+que confirma si el correo tiene el formato correcto. En validaciones de email
+esto es muy común, por lo tanto *inferimos* que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos 
-enfrentamos a contextos desconocidos, el caso del email es la excepción a la regla.
+enfrentamos a contextos desconocidos. El caso del email es la excepción a la regla.
 
 ¿Cómo se puede hacer esto más legible?
 
@@ -78,16 +78,22 @@ Acá hay varias cosas que notar. Lo primero es que encapsulamos la lógica de
 validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad. 
 
-Por otra parte, *email_formatted* de validación *tiene un nombre que revela su 
-propósito*, esto es clave, ya que permite leer la condición y determinar 
-inmediatamente lo que hace el código. En el ejempo, éste recibe un texto
+Por otra parte, el método de validación *email_formatted* tiene un nombre que 
+revela su propósito. Esto es clave, ya que permite leer la condición y determinar 
+inmediatamente lo que hace. En el ejempo, éste recibe un texto
 y revisa si es *email formatted*, es decir, tiene formato de correo y se aplica 
-sobre un string cualquiera. Más aún, al poner este nombre en la condición, se 
-lee literalmente en inglés: *not email formatted*.
+sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
+ en inglés: *not email formatted*.
+
+{% codeblock lang:python %}
+
+    if not email or not email_formatted(email):
+
+{% endcodeblock %}
 
 Por último y no menos importante, en la función de validación
 separo en una variable la expresión regular, ya que nos ayuda en la legibilidad 
-de lo que hacemos al tener dos lineas cortas y claras.
+de lo que hacemos al tener dos líneas cortas y claras.
 
 ###Muchas validaciones
 
@@ -111,9 +117,9 @@ def validate_product(data):
 {% endcodeblock %}
 
 El código anterior tiene varios problemas. Lo primero y mas evidente es que
-se validan muchas condiciones y lo hace difícil de comprender, ni siquiera cabe 
-en la pantalla, por lo tanto estamos violando [la regla de 80 caracteres](http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width).
-Por otra parte se repiten cosas en las dos condiciones, solo la última parte es
+se validan muchas condiciones de corrido, esto lo hace difícil de comprender. 
+Tampoco cabe en la pantalla, por lo tanto estamos violando [la regla de 80 caracteres](http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width).
+Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un *big calculation* dos veces.
 
 ####Agrupando condiciones en variables boolean autoexplicativas
@@ -134,13 +140,13 @@ Como se ve más arriba, transformamos condiciones que a veces no son tan claras
 asignándoles un nombre que revele su propósito, como *code_has_correct_format*.
 
 Por otro lado, se pueden juntar varias condiciones en una variable, siempre y 
-cuando pertenezcan a un propósito común. En el caso del ejemplo, todas las 
-condiciones que quieren validar el formato se fusionan en un parámetro con un 
-nombre adecuado, en este caso: *code_has_correct_format*.
+cuando pertenezcan a un propósito común. En el ejemplo, todas las 
+condiciones que validan el formato se fusionan en un sólo parámetro y se utiliza
+un nombre adecuado: *code_has_correct_format*.
 
 De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos 
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas, 
-por lo tanto lo separamos en una función cuyo nombre describa su propósito.
+de esta forma lo separamos en una función cuyo nombre describa su propósito.
 
 {% codeblock lang:python %}
 def validate_product(data):
@@ -169,9 +175,9 @@ El método *code_formatted* en otros contextos no es trivial de inferir. Hacer
 estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
 refactorizar y cómo.
 
-Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
-en los condicionales, cómo gracias a eso se puede aplicar [La Ley de Morgan](http://es.wikipedia.org/wiki/Leyes_de_De_Morgan) 
-de lógica proposicional para hacer mejoras y por qué menos lineas no siempre es
-mejor.
+Eso por ahora, la segunda parte tratará sobre la importancia de ser *positivo
+en los condicionales*, cómo gracias a eso se puede aplicar [La Ley de Morgan](http://es.wikipedia.org/wiki/Leyes_de_De_Morgan) 
+de lógica proposicional para hacer mejoras y por qué *menos líneas no siempre es
+mejor*.
 
 Hasta la próxima.
