@@ -4,7 +4,7 @@
   <title><![CDATA[Category: if | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/if/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T19:59:15-03:00</updated>
+  <updated>2013-12-22T20:03:47-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -288,7 +288,10 @@ refactorizar y cómo.</p>
 
 <p>Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
 en los condicionales, cómo gracias a eso se puede aplicar <a href="http://es.wikipedia.org/wiki/Leyes_de_De_Morgan">La Ley de Morgan</a>
-de lógica proposicional para hacer mejoras y otros temas relacionados.</p>
+de lógica proposicional para hacer mejoras y por qué menos lineas no siempre es
+mejor.</p>
+
+<p>Hasta la próxima.</p>
 ]]></content>
   </entry>
   
