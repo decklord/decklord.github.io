@@ -4,7 +4,7 @@
   <title><![CDATA[Category: if | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/if/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T19:22:08-03:00</updated>
+  <updated>2013-12-22T19:39:51-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -217,6 +217,14 @@ variables boolean. Por ejemplo:</p>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<p>Como se ve más arriba, transformamos condiciones que a veces no son tan claras
+asignándoles un nombre que revele su propósito, como <em>code_has_coorect_format</em>.</p>
+
+<p>Por otro lado, se pueden juntar varias condiciones en una variable, siempre y
+cuando pertenezcan a un propósito común. En el caso del ejemplo, todas las
+condiciones que quieren validar el formato se fusionan en un parámetro con un
+nombre adecuado, en este caso: <em>code_has_correct_format</em>.</p>
+
 <p>De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas,
 por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p>
@@ -271,8 +279,13 @@ por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<p>La función <em>code_formatted</em> en otros contextos no es trivial de inferir. Hacer
+estas separaciones nos permiten tener una visión mucho más clara de que se debe
+refactorizar y cómo.</p>
+
 <p>Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
-en los condicionales y otros temas relacionados.</p>
+en los condicionales, cómo gracias a eso se puede aplicar <a href="http://es.wikipedia.org/wiki/Leyes_de_De_Morgan">La Ley de Morgan</a>
+de lógica proposicional para hacer mejoras y otros temas relacionados.</p>
 ]]></content>
   </entry>
   
