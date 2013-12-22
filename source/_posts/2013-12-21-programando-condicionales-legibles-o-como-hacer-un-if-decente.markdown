@@ -128,7 +128,7 @@ if code_has_correct_format and some_result_is_ok and code_is_nn_kind:
 {% endcodeblock %}
 
 Como se ve más arriba, transformamos condiciones que a veces no son tan claras
-asignándoles un nombre que revele su propósito, como *code_has_coorect_format*.
+asignándoles un nombre que revele su propósito, como *code_has_correct_format*.
 
 Por otro lado, se pueden juntar varias condiciones en una variable, siempre y 
 cuando pertenezcan a un propósito común. En el caso del ejemplo, todas las 
@@ -163,7 +163,7 @@ def code_formatted(text):
 {% endcodeblock %}
 
 La función *code_formatted* en otros contextos no es trivial de inferir. Hacer
-estas separaciones nos permiten tener una visión mucho más clara de que se debe
+estas separaciones nos permiten tener una visión mucho más clara de qué se debe
 refactorizar y cómo.
 
 Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
