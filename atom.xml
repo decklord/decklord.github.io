@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-15T10:48:30-03:00</updated>
+  <updated>2013-12-22T19:22:08-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -12,6 +12,220 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Programando condicionales legibles o como hacer un if decente, primera parte]]></title>
+    <link href="http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente/"/>
+    <updated>2013-12-21T01:25:29-03:00</updated>
+    <id>http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente</id>
+    <content type="html"><![CDATA[<h3>Los Condicionales</h3>
+
+<p>En la vida del desarrollador es necesario definir muchos condicionales. Con
+condicional me refiero a escribir un <em>if</em> en partes de tu código, lo cual
+ocurre cientos, si no miles de veces en un software.</p>
+
+<p>Los condicionales son una pieza clave y si una cosa de este estilo se hace mal
+tiene un impacto incalculable en tu trabajo por dos motivos. El primero es que si
+definimos malos condicionales hacemos que el código tienda a tener errores y
+por otro lado dificulta su mantenibilidad, lo cual es tanto o más importante
+que lo anterior.</p>
+
+<!-- more -->
+
+
+<h3>Condiciones engorrosas</h3>
+
+<p>Ahora bien, ¿a qué me refiero con escribir <em>buenos</em> o <em>malos</em>
+condicionales? Pongámoslo en un ejemplo, supongamos que quiero validar un
+formulario de registro y me llega el usuario junto con el email:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">validate_form</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">email</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;email&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;Error, you must enter a name&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">email</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">r&quot;^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;Error, you must enter a valid email&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En el ejemplo anterior, la segunda validación de email es una expresión regular
+que nos valida si el correo tiene el formato correcto. En validaciones de email
+esto es muy común por lo tanto <em>inferimos</em> que se trata de eso. El problema
+es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos
+enfrentamos a contextos desconocidos, el caso del email es la excepción a la regla.</p>
+
+<p>¿Cómo se puede hacer esto más legible?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">validate_form</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">email</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;email&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;Error, you must enter a name&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c">#Yes, now I&#39;m more legible</span>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">email</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">email_formatted</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;Error, you must enter a valid email&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#my name reveals my purpose</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">email_formatted</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+</span><span class='line'>    <span class="c">#I add this variable to avoid a long ugly line</span>
+</span><span class='line'>    <span class="n">regular_expression</span> <span class="o">=</span> <span class="s">r&quot;^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$&quot;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regular_expression</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Acá hay varias cosas que notar. Lo primero es que encapsulamos la lógica de
+validación en una función. Esto nos permite usar simplemente la función en
+nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad.</p>
+
+<p>Por otra parte, la función de validación <em>tiene un nombre que revela su
+propósito</em>, esto es clave, nos permite leer la condición y determinar
+inmediatamente lo que hace el código. En este caso la función recibe un texto
+y revisa si es <em>email formatted</em>, es decir, tiene formato de correo y se aplica
+sobre un string cualquiera. Más aún, al poner este nombre en la condición, se
+lee literalmente en inglés: <em>not email formatted</em>.</p>
+
+<p>Por último y no menos importante, en la función de validación
+separo en una variable la expresión regular, ya que nos ayuda en la legibilidad
+de lo que hacemos al tener dos lineas cortas y claras.</p>
+
+<h3>Muchas validaciones</h3>
+
+<p>En ocasiones hay que validar muchas cosas para obtener un output concreto:
+Que el string contenga o no contenga algún parámetro, que sea de cierto tipo de
+dato, etc. Situaciónes como la siguiente:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">validate_product</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">code</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span><span class='line'>    <span class="k">elif</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El código anterior tiene varios problemas. Lo primero y mas evidente es que
+se validan muchas condiciones y lo hace difícil de comprender, ni siquiera cabe
+en la pantalla, por lo tanto estamos violando <a href="http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width">la regla de 80 caracteres</a>.
+Por otra parte se repiten cosas en las dos condiciones, solo la última parte es
+diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
+
+<h4>Agrupando condiciones en variables boolean autoexplicativas</h4>
+
+<p>Una manera de simplificar la legibilidad de un set de condiciones es unirlas en
+variables boolean. Por ejemplo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">code_has_correct_format</span> <span class="o">=</span> <span class="n">parameter</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span>
+</span><span class='line'><span class="n">some_result_is_ok</span> <span class="o">=</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
+</span><span class='line'><span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">code_has_correct_format</span> <span class="ow">and</span> <span class="n">some_result_is_ok</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos
+la redundancia. Lamentablemente las validaciones de formato aún son muy largas,
+por lo tanto lo separamos en una función cuyo nombre describa su propósito.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">validate_product</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">code</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">code_has_correct_format</span> <span class="o">=</span> <span class="n">code_formatted</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">some_result_is_ok</span> <span class="o">=</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">code_is_safe_to_use</span> <span class="o">=</span> <span class="n">code_has_correct_format</span> <span class="ow">and</span> <span class="n">some_result_is_ok</span>
+</span><span class='line'>    <span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
+</span><span class='line'>    <span class="n">code_is_pp_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span><span class='line'>    <span class="k">elif</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_pp_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">code_formatted</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">text</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">text</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
+en los condicionales y otros temas relacionados.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Configurando GitHub Pages con nic.cl]]></title>
