@@ -127,6 +127,14 @@ if code_has_correct_format and some_result_is_ok and code_is_nn_kind:
     print "The rabbit is in the hole"
 {% endcodeblock %}
 
+Como se ve más arriba, transformamos condiciones que a veces no son tan claras
+asignándoles un nombre que revele su propósito, como *code_has_coorect_format*.
+
+Por otro lado, se pueden juntar varias condiciones en una variable, siempre y 
+cuando pertenezcan a un propósito común. En el caso del ejemplo, todas las 
+condiciones que quieren validar el formato se fusionan en un parámetro con un 
+nombre adecuado, en este caso: *code_has_correct_format*.
+
 De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos 
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas, 
 por lo tanto lo separamos en una función cuyo nombre describa su propósito.
@@ -154,5 +162,10 @@ def code_formatted(text):
 
 {% endcodeblock %}
 
+La función *code_formatted* en otros contextos no es trivial de inferir. Hacer
+estas separaciones nos permiten tener una visión mucho más clara de que se debe
+refactorizar y cómo.
+
 Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
-en los condicionales y otros temas relacionados.
+en los condicionales, cómo gracias a eso se puede aplicar [La Ley de Morgan](http://es.wikipedia.org/wiki/Leyes_de_De_Morgan) 
+de lógica proposicional para hacer mejoras y otros temas relacionados.
