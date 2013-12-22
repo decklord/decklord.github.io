@@ -45,7 +45,7 @@ def validate_form(data):
 {% endcodeblock %}
 
 En el ejemplo anterior, la segunda validación de email es una expresión regular
-que nos valida si el correo tiene el formato correcto. En validaciones de email
+que valida si el correo tiene el formato correcto. En validaciones de email
 esto es muy común por lo tanto *inferimos* que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos 
 enfrentamos a contextos desconocidos, el caso del email es la excepción a la regla.
@@ -75,12 +75,12 @@ def email_formatted(text):
 {% endcodeblock %}
 
 Acá hay varias cosas que notar. Lo primero es que encapsulamos la lógica de 
-validación en una función. Esto nos permite usar simplemente la función en
+validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad. 
 
-Por otra parte, la función de validación *tiene un nombre que revela su 
-propósito*, esto es clave, nos permite leer la condición y determinar 
-inmediatamente lo que hace el código. En este caso la función recibe un texto
+Por otra parte, *email_formatted* de validación *tiene un nombre que revela su 
+propósito*, esto es clave, ya que permite leer la condición y determinar 
+inmediatamente lo que hace el código. En el ejempo, éste recibe un texto
 y revisa si es *email formatted*, es decir, tiene formato de correo y se aplica 
 sobre un string cualquiera. Más aún, al poner este nombre en la condición, se 
 lee literalmente en inglés: *not email formatted*.
@@ -165,8 +165,8 @@ def code_formatted(text):
 
 {% endcodeblock %}
 
-La función *code_formatted* en otros contextos no es trivial de inferir. Hacer
-estas separaciones nos permiten tener una visión mucho más clara de qué se debe
+El método *code_formatted* en otros contextos no es trivial de inferir. Hacer
+estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
 refactorizar y cómo.
 
 Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
