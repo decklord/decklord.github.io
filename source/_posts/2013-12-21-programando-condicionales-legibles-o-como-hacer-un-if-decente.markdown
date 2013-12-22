@@ -171,4 +171,7 @@ refactorizar y cómo.
 
 Eso por ahora, en la segunda parte hablare sobre la importancia de ser positivo
 en los condicionales, cómo gracias a eso se puede aplicar [La Ley de Morgan](http://es.wikipedia.org/wiki/Leyes_de_De_Morgan) 
-de lógica proposicional para hacer mejoras y otros temas relacionados.
+de lógica proposicional para hacer mejoras y por qué menos lineas no siempre es
+mejor.
+
+Hasta la próxima.
