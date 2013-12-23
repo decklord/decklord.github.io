@@ -80,11 +80,13 @@ Acá hay varias cosas que notar. Lo primero es que encapsulamos la lógica de
 validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad. 
 
+{% codeblock lang:python %}
+def email_formatted(text):
+{% endcodeblock %}
+
 Por otra parte, el método de validación *email_formatted* tiene un nombre que 
 revela su propósito. Esto es clave, ya que permite leer la condición y determinar 
-inmediatamente lo que hace. En el ejempo, éste recibe un texto
-y revisa si es *email formatted*, es decir, tiene formato de correo y se aplica 
-sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
+inmediatamente lo que hace. Más aún, al poner este nombre, se lee literalmente
  en inglés: *not email formatted*.
 
 {% codeblock lang:python %}
@@ -96,6 +98,11 @@ sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
 Por último y no menos importante, en la función de validación
 separo en una variable la expresión regular, ya que nos ayuda en la legibilidad 
 de lo que hacemos al tener dos líneas cortas y claras.
+
+{% codeblock lang:python %}
+    regular_expression = r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$"
+    return re.match(regular_expression, text)
+{% endcodeblock %}
 
 ###Muchas validaciones
 
@@ -119,7 +126,7 @@ def validate_product(data):
 {% endcodeblock %}
 
 El código anterior tiene varios problemas. Lo primero y mas evidente es que
-se validan muchas condiciones de corrido, esto lo hace difícil de comprender. 
+se validan muchas condiciones de corrido (5!), esto lo hace difícil de comprender. 
 Tampoco cabe en la pantalla, por lo tanto estamos violando [la regla de 80 caracteres](http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width).
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un *big calculation* dos veces.
