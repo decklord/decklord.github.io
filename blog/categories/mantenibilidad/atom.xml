@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mantenibilidad | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/mantenibilidad/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T20:40:12-03:00</updated>
+  <updated>2013-12-22T21:15:46-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -78,7 +78,9 @@ el usuario junto con el email:</p>
 que confirma si el correo tiene el formato correcto. En validaciones de email
 esto es muy común, por lo tanto <em>inferimos</em> que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos
-enfrentamos a contextos desconocidos. El caso del email es la excepción a la regla.</p>
+enfrentamos a contextos desconocidos. Una validación larga como ésta nos puede
+traer muchos dolores de cabeza al intentar descifrarla. El caso del email es la
+excepción a la regla.</p>
 
 <p>¿Cómo se puede hacer esto más legible?</p>
 
