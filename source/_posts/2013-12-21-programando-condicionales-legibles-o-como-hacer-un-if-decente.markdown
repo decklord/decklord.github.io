@@ -48,7 +48,9 @@ En el ejemplo anterior, la segunda validación de email es una expresión regula
 que confirma si el correo tiene el formato correcto. En validaciones de email
 esto es muy común, por lo tanto *inferimos* que se trata de eso. El problema
 es que en la práctica hacer estas inferencias no es trivial, ya que típicamente nos 
-enfrentamos a contextos desconocidos. El caso del email es la excepción a la regla.
+enfrentamos a contextos desconocidos. Una validación larga como ésta nos puede 
+traer muchos dolores de cabeza al intentar descifrarla. El caso del email es la 
+excepción a la regla.
 
 ¿Cómo se puede hacer esto más legible?
 
