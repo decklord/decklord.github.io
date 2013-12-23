@@ -254,9 +254,9 @@ dato, etc. Situaciónes como la siguiente:</p>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">code</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">]</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span><span class="p">:</span>
 </span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
-</span><span class='line'>    <span class="k">elif</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">elif</span> <span class="n">code</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span> <span class="ow">and</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span><span class="p">:</span>
 </span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
 </span><span class='line'>    <span class="k">else</span><span class="p">:</span>
 </span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
@@ -280,9 +280,9 @@ variables boolean. Por ejemplo:</p>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">code_has_correct_format</span> <span class="o">=</span> <span class="n">parameter</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">code_has_correct_format</span> <span class="o">=</span> <span class="n">parameter</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span>
 </span><span class='line'><span class="n">some_result_is_ok</span> <span class="o">=</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
-</span><span class='line'><span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
+</span><span class='line'><span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">if</span> <span class="n">code_has_correct_format</span> <span class="ow">and</span> <span class="n">some_result_is_ok</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
 </span><span class='line'>    <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
@@ -327,8 +327,8 @@ de esta forma lo separamos en una función cuyo nombre describa su propósito.</
 </span><span class='line'>    <span class="n">code_has_correct_format</span> <span class="o">=</span> <span class="n">code_formatted</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
 </span><span class='line'>    <span class="n">some_result_is_ok</span> <span class="o">=</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
 </span><span class='line'>    <span class="n">code_is_safe_to_use</span> <span class="o">=</span> <span class="n">code_has_correct_format</span> <span class="ow">and</span> <span class="n">some_result_is_ok</span>
-</span><span class='line'>    <span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
-</span><span class='line'>    <span class="n">code_is_pp_kind</span> <span class="o">=</span> <span class="n">parametter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span>
+</span><span class='line'>    <span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
+</span><span class='line'>    <span class="n">code_is_pp_kind</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="k">if</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
 </span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
@@ -343,8 +343,90 @@ de esta forma lo separamos en una función cuyo nombre describa su propósito.</
 
 
 <p>El método <em>code_formatted</em> en otros contextos no es trivial de inferir. Hacer
-estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
-refactorizar y cómo.</p>
+estas separaciones nos habilita a tener una visión mucho más clara de qué se debe
+refactorizar y cómo. Con esto, podemos eliminar la variable
+<em>code_has_correct_format</em> y usar directamente la función.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">validate_product</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">code</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">some_result_is_ok</span> <span class="o">=</span> <span class="n">big_calculation</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+</span><span class='line'>    <span class="c">#removing variable, using function instead :O</span>
+</span><span class='line'>    <span class="n">code_is_safe_to_use</span> <span class="o">=</span> <span class="n">code_formatted</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="ow">and</span> <span class="n">some_result_is_ok</span>
+</span><span class='line'>    <span class="n">code_is_nn_kind</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;NN&quot;</span>
+</span><span class='line'>    <span class="n">code_is_pp_kind</span> <span class="o">=</span> <span class="n">parameter</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;PP&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span><span class='line'>    <span class="k">elif</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_pp_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">code_formatted</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">text</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">text</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;01&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finalmente, en el if tenemos dos opciones, la primera es mantener lo que está:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="k">if</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span><span class='line'>    <span class="k">elif</span> <span class="n">code_is_safe_to_use</span> <span class="ow">and</span> <span class="n">code_is_pp_kind</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La otra opción es anidar la segunda condición en un nuevo if:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="k">if</span> <span class="n">code_is_safe_to_use</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">code_is_nn_kind</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole&quot;</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">print</span> <span class="s">&quot;The rabbit is in the hole, but is from another kind&quot;</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">print</span> <span class="s">&quot;No rabbit :(&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En lo personal me gusta más la primera, en general evito hacer muchas anidaciones
+y dos condiciones me parece razonable en un if de una linea a pesar de mantener un
+poco de redundancia. Eso queda al gusto del programador.</p>
 
 <p>Eso por ahora, la segunda parte tratará sobre la importancia de ser <em>positivo
 en los condicionales</em>, cómo gracias a eso se puede aplicar <a href="http://es.wikipedia.org/wiki/Leyes_de_De_Morgan">La Ley de Morgan</a>
