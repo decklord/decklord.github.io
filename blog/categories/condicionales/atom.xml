@@ -4,7 +4,7 @@
   <title><![CDATA[Category: condicionales | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/condicionales/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-22T21:15:46-03:00</updated>
+  <updated>2013-12-22T21:20:14-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -140,11 +140,13 @@ excepción a la regla.</p>
 validación en una función. Esto abre paso a usar simplemente el método en
 nuestro condicional y hacerlo más pequeño, lo que mejora su legibilidad.</p>
 
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">email_formatted</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
 <p>Por otra parte, el método de validación <em>email_formatted</em> tiene un nombre que
 revela su propósito. Esto es clave, ya que permite leer la condición y determinar
-inmediatamente lo que hace. En el ejempo, éste recibe un texto
-y revisa si es <em>email formatted</em>, es decir, tiene formato de correo y se aplica
-sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
+inmediatamente lo que hace. Más aún, al poner este nombre, se lee literalmente
  en inglés: <em>not email formatted</em>.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -164,6 +166,22 @@ sobre un string cualquiera. Más aún, al poner este nombre, se lee literalmente
 <p>Por último y no menos importante, en la función de validación
 separo en una variable la expresión regular, ya que nos ayuda en la legibilidad
 de lo que hacemos al tener dos líneas cortas y claras.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">regular_expression</span> <span class="o">=</span> <span class="s">r&quot;^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$&quot;</span>
+</span><span class='line'><span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regular_expression</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Muchas validaciones</h3>
 
@@ -204,7 +222,7 @@ dato, etc. Situaciónes como la siguiente:</p>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>El código anterior tiene varios problemas. Lo primero y mas evidente es que
-se validan muchas condiciones de corrido, esto lo hace difícil de comprender.
+se validan muchas condiciones de corrido (5!), esto lo hace difícil de comprender.
 Tampoco cabe en la pantalla, por lo tanto estamos violando <a href="http://programmers.stackexchange.com/questions/148677/why-is-80-characters-the-standard-limit-for-code-width">la regla de 80 caracteres</a>.
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
