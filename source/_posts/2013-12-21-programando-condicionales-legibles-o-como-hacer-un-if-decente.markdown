@@ -146,12 +146,10 @@ if code_has_correct_format and some_result_is_ok and code_is_nn_kind:
 {% endcodeblock %}
 
 Como se ve más arriba, transformamos condiciones que a veces no son tan claras
-asignándoles un nombre que revele su propósito, como *code_has_correct_format*.
-
-Por otro lado, se pueden juntar varias condiciones en una variable, siempre y 
-cuando pertenezcan a un propósito común. En el ejemplo, todas las 
-condiciones que validan el formato se fusionan en un sólo parámetro y se utiliza
-un nombre adecuado: *code_has_correct_format*.
+asignándoles un nombre que revele su propósito. La idea es unit varias 
+condiciones en una variable, siempre y cuando pertenezcan a un propósito común. 
+En el ejemplo, todas las condiciones que validan el formato se fusionan en un 
+sólo parámetro y se utiliza un nombre adecuado: *code_has_correct_format*.
 
 De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos 
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas, 
