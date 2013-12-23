@@ -116,9 +116,9 @@ def validate_product(data):
 
     code = data['code']
 
-    if code and len(code) == 26 and parametter[:2] == "01" and big_calculation(code) and parametter[:24] == "NN":
+    if code and len(code) == 26 and parameter[:2] == "01" and big_calculation(code) and parameter[:24] == "NN":
         print "The rabbit is in the hole"
-    elif code and len(code) == 26 and parametter[:2] == "01" and big_calculation(code) and parametter[:24] == "PP":
+    elif code and len(code) == 26 and parameter[:2] == "01" and big_calculation(code) and parameter[:24] == "PP":
         print "The rabbit is in the hole, but is from another kind"
     else:
         print "No rabbit :("
@@ -137,9 +137,9 @@ Una manera de simplificar la legibilidad de un set de condiciones es unirlas en
 variables boolean. Por ejemplo:
 
 {% codeblock lang:python %}
-code_has_correct_format = parameter and len(parameter) == 26 and parametter[:2] == "01"
+code_has_correct_format = parameter and len(parameter) == 26 and parameter[:2] == "01"
 some_result_is_ok = big_calculation(parameter)
-code_is_nn_kind = parametter[:24] == "NN"
+code_is_nn_kind = parameter[:24] == "NN"
 
 if code_has_correct_format and some_result_is_ok and code_is_nn_kind:
     print "The rabbit is in the hole"
@@ -165,8 +165,8 @@ def validate_product(data):
     code_has_correct_format = code_formatted(code)
     some_result_is_ok = big_calculation(code)
     code_is_safe_to_use = code_has_correct_format and some_result_is_ok
-    code_is_nn_kind = parametter[:24] == "NN"
-    code_is_pp_kind = parametter[:24] == "PP"
+    code_is_nn_kind = parameter[:24] == "NN"
+    code_is_pp_kind = parameter[:24] == "PP"
 
     if code_is_safe_to_use and code_is_nn_kind:
         print "The rabbit is in the hole"
@@ -181,8 +181,63 @@ def code_formatted(text):
 {% endcodeblock %}
 
 El método *code_formatted* en otros contextos no es trivial de inferir. Hacer
-estas separaciones nos habilitan a tener una visión mucho más clara de qué se debe
-refactorizar y cómo.
+estas separaciones nos habilita a tener una visión mucho más clara de qué se debe
+refactorizar y cómo. Con esto, podemos eliminar la variable 
+*code_has_correct_format* y usar directamente la función.
+
+{% codeblock lang:python %}
+def validate_product(data):
+
+    code = data['code']
+
+    some_result_is_ok = big_calculation(code)
+    #removing variable, using function instead :O
+    code_is_safe_to_use = code_formatted(code) and some_result_is_ok
+    code_is_nn_kind = parameter[:24] == "NN"
+    code_is_pp_kind = parameter[:24] == "PP"
+
+    if code_is_safe_to_use and code_is_nn_kind:
+        print "The rabbit is in the hole"
+    elif code_is_safe_to_use and code_is_pp_kind:
+        print "The rabbit is in the hole, but is from another kind"
+    else:
+        print "No rabbit :("
+
+def code_formatted(text):
+    return text and len(text) == 26 and text[:2] == "01"
+
+{% endcodeblock %}
+
+Finalmente, en el if tenemos dos opciones, la primera es mantener lo que está:
+
+{% codeblock lang:python %}
+
+    if code_is_safe_to_use and code_is_nn_kind:
+        print "The rabbit is in the hole"
+    elif code_is_safe_to_use and code_is_pp_kind:
+        print "The rabbit is in the hole, but is from another kind"
+    else:
+        print "No rabbit :("
+
+{% endcodeblock %}
+
+La otra opción es anidar la segunda condición en un nuevo if:
+
+{% codeblock lang:python %}
+
+    if code_is_safe_to_use:
+        if code_is_nn_kind:
+            print "The rabbit is in the hole"
+        else:
+            print "The rabbit is in the hole, but is from another kind"
+    else:
+        print "No rabbit :("
+
+{% endcodeblock %}
+
+En lo personal me gusta más la primera, en general evito hacer muchas anidaciones
+y dos condiciones me parece razonable en un if de una linea a pesar de mantener un 
+poco de redundancia. Eso queda al gusto del programador.
 
 Eso por ahora, la segunda parte tratará sobre la importancia de ser *positivo
 en los condicionales*, cómo gracias a eso se puede aplicar [La Ley de Morgan](http://es.wikipedia.org/wiki/Leyes_de_De_Morgan) 
