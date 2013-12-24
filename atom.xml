@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-23T12:11:57-03:00</updated>
+  <updated>2013-12-24T10:38:29-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -12,6 +12,111 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[El paradigma del hacer y el por qué evitar las reuniones]]></title>
+    <link href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/"/>
+    <updated>2013-12-23T23:25:31-03:00</updated>
+    <id>http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones</id>
+    <content type="html"><![CDATA[<h3>Getting things done</h3>
+
+<p>Hace años que sigo la <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">filosofía GTD</a> gracias al conocido blog <a href="http://lifehacker.com/search?q=gtd">Lifehacker</a>. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:</p>
+
+<ul>
+<li>Transformar gmail en un todo-list dejando en el inbox sólo los emails
+que tengan algo pendiente que resolver.</li>
+<li>La tecnología es tu amiga, sácale el jugo, no seas anticuado sin razón de peso.</li>
+<li>Memoriza los shortcuts de las herramientas que usas, evita el mouse, el teclado siempre es más rápido.</li>
+<li>Automatiza o delega todo lo que puedas.</li>
+<li>Organiza tu espacio de trabajo de la manera más eficiente posible.</li>
+<li>Buscar métodos para entrar rápidamente en la <a href="http://en.wikipedia.org/wiki/Flow_(psychology)"><em>&ldquo;zona&rdquo;</em></a>.</li>
+<li>Divide todo lo que tienes que hacer en <a href="http://facilethings.com/blog/en/small-things-first">micro tareas</a> dentro de un todo-list.</li>
+</ul>
+
+
+<p><span class='pullquote-right' data-pullquote='Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.'>
+El primer y último punto son claves, el todo-list es tu amigo. Es fundamental para adoptar la metodología <em>del hacer</em> o <em>resolver</em>. No importa si es en un papel o en un computador. Lo importante es  descomponer tareas grandes, siguiendo el clásico principio de <a href="http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm">dividir para reinar</a>.</p>
+
+<p>El orden también es importante, <strong>de <a href="http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done">la más pequeña a la más compleja</a>, comenzando por lo más fácil</strong>. Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.
+</span></p>
+
+<p>Ahora bien, ¿Cómo se relaciona esto a las reuniones?
+¿Por qué son <strong>una pérdida de tiempo</strong>?</p>
+
+<!-- more -->
+
+
+<h3>La filosofía del hacer</h3>
+
+<p>Tuve la oportunidad de participar en el programa <a href="http://www.techstars.com/program/locations/nyc/">TechStars, en NY</a>
+a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender muchísimo respecto a estas prácticas, alineadas con lo anterior y a otros paradigmas de los archiconocidos libros <a href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf">Rework</a> y <a href="http://theleanstartup.com/">The Lean Startup</a>.</p>
+
+<p><span class='pullquote-left' data-pullquote='Si asimilas estos libros comprendes que lo importante está en centrarse en
+el hacer.'>
+Si asimilas estos libros comprendes que lo importante está en centrarse en
+el hacer. El término gringo que me gusta más es <em>Deliver</em>. Cuando nos
+encontramos en una organización pequeña y con escasos recursos, el típico
+escenario de Emprendimiento/Startup, <strong>no te puedes dar el lujo de perder
+el tiempo en burocracia</strong>.</p>
+
+<p>El que pierde el tiempo quiebra, así de simple. ¿Por qué? porque no tienes o no alcanzas a tener producto y por ende tampoco resultados, por lo tanto, se acaban los recursos y tu negocio/idea/organización/proyecto fracasa. Todo lo que no implique estar generando resultados pierde sentido bajo esta visión, lo cual puede sonar obvio, pero en la práctica es fácil perder el foco.
+</span></p>
+
+<h3>¿Estás siendo efectivo?</h3>
+
+<p>Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de <em>hacer cosas</em>, <em>resolver</em>, <em>Deliver</em>, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. <strong>¡Estar ocupado no es sinónimo de HACER!</strong>.</p>
+
+<h3>¿Nos juntamos en una hora más?</h3>
+
+<p>Ahora bien, las reuniones nos alejan del <em>Deliver</em> pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo: <em>el planificador de planificaciones</em> o más conocido como <strong>el burócrata</strong>. En Rework, Jason Fried y David Heinemeier hacen <a href="http://gettingreal.37signals.com/ch07_Meetings_Are_Toxic.php">hincapié en las reuniones</a>, al punto de referirse a ellas como <strong>eventos tóxicos</strong>.</p>
+
+<p><span class='pullquote-right' data-pullquote='No hay nada peor que estar 2 horas en una reunión que podría haber durado 5 minutos, lo más lamentable es que usualmente pasa eso.'>
+La base de este pensamiento proviene del hecho de que en una reunión se <em>habla de lo que se hará</em> pero le quitamos tiempo a lo más importante, <em>el hacer</em>. La reunión debe ser restringida al máximo: el mínimo de personas, el mínimo de tiempo e ir <strong>al callo</strong>. De lo contrario perdemos el control.</p>
+
+<p>No hay nada peor que estar 2 horas en una reunión que podría haber durado 5 minutos, lo más lamentable es que usualmente pasa eso. En una reunión las personas tendemos a perder el hilo, divagar, bromear, contar anécdotas, etc. sobre todo en la cultura <em>chilensis</em> y para eso hay otras instancias.
+</span></p>
+
+<h3>El caso más dramático, la reunión periódica</h3>
+
+<p>No hay nada peor que una reunión a la que estamos obligados a ir en forma periódica. Son dos los grandes motivos:</p>
+
+<h4>Esperando la reunión</h4>
+
+<p>Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, ¡<strong>keep it simple</strong>!.</p>
+
+<h4>Calentando el asiento</h4>
+
+<p>La reunión usualmente tiene un periodo de tiempo fijo. Si no tenemos nada que comentar, discutir o proponer, muchas veces la reunión se hace igual con temas intrascendentes, haciendo perder el tiempo a todos.</p>
+
+<h3>¿Cómo simplificar la burocracia?</h3>
+
+<p>En mi opinión, la reunión realmente efectiva <em>es espontánea</em>. En ella todas las partes conocen su rol, saben del tema y están alineados <em>en el hacer</em>, aparece oportunamente cuando es <em>necesario</em> discutir algo que no está claro y se hace <em>en el acto</em>, esto se nota mucho pues usualmente las discusiones en este contexto no llegan a más de diez minutos y rápidamente todos vuelven a su puesto de trabajo, la reunión es un medio y no un fin. Más que una reunión es una conversación informal que permite dejar los lineamientos claros para seguir <em>haciendo</em>.</p>
+
+<p>Antes de proponer una reunión hay que analizar lo que se va a plantear. La primera pregunta es: <strong>¿puedo llegar al mismo resultado enviando un email?</strong>. Si la respuesta es sí, entonces manda el email y fin. El correo es mucho más eficiente, es asíncrono y remoto, por lo que permite a las partes colaborar en diferentes espacios de tiempo y en cualquier lugar además de que deja un registro. Ideal para delegar tareas sencillas o medias.</p>
+
+<p>Lo segundo, <strong>¿es necesario convocarlos a todos?</strong> Muchas veces queremos que todos participen de algo, cuando la mejor alternativa probablemente es ir de manera individual tratando los temas que competen a cada persona. Así no quitamos tiempo a los demás.</p>
+
+<p>Tercero: <strong>¿realmente necesito una reunión para tomar esta decisión?</strong>
+Si estás en el poder de tomar una decisión sin requerir al resto, házlo y luego comunícalo. Ahorrarás toda una discusión, muchas veces redundante e innecesaria. Como se dice coloquialmente:</p>
+
+<blockquote><p>Es mejor pedir perdón que pedir permiso.</p></blockquote>
+
+
+<p>Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero <strong>ejecuta rápido</strong>. Supongo que a esto se le llama <strong>Lean Management</strong>.</p>
+
+<h3>Concluyendo</h3>
+
+<p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
+
+<p>A pesar de todo, hay ocasiones donde una reunión es necesaria. Un ejemplo pueden ser las situaciones donde se debe llegar a un acuerdo y se requiere de debate y éste tiene una complejidad a tal grado que las actuales tecnologías podrían entorpecer algo de esta envergadura, por ejemplo, una reunión de directorio. Ahora bien, en empresas pequeñas rara vez vemos una situación como ésta. Otro caso válido es hacer brainstorming para buscar soluciones creativas a un problema.</p>
+
+<p>Aún así, evita las reuniones, nos quitan tiempo importante que se puede invertir en hacer cosas concretas. Sé práctico, ejecutor, no burócrata.</p>
+
+<p>Si por algún extraño motivo el lector cree que este artículo aplica sólo a informáticos está profundamente errado. <em>Incluso el tip del teclado del principio</em>. Por otro lado, has leído hasta aquí. Te mereces un premio.</p>
+
+<p>Hasta la próxima.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Programando condicionales legibles o como hacer un if decente, primera parte]]></title>
@@ -198,12 +303,10 @@ variables boolean. Por ejemplo:</p>
 
 
 <p>Como se ve más arriba, transformamos condiciones que a veces no son tan claras
-asignándoles un nombre que revele su propósito, como <em>code_has_correct_format</em>.</p>
-
-<p>Por otro lado, se pueden juntar varias condiciones en una variable, siempre y
-cuando pertenezcan a un propósito común. En el ejemplo, todas las
-condiciones que validan el formato se fusionan en un sólo parámetro y se utiliza
-un nombre adecuado: <em>code_has_correct_format</em>.</p>
+asignándoles un nombre que revele su propósito. La idea es unit varias
+condiciones en una variable, siempre y cuando pertenezcan a un propósito común.
+En el ejemplo, todas las condiciones que validan el formato se fusionan en un
+sólo parámetro y se utiliza un nombre adecuado: <em>code_has_correct_format</em>.</p>
 
 <p>De esta manera, simplificamos la lectura, la cual se vuelve directa y evitamos
 la redundancia. Lamentablemente las validaciones de formato aún son muy largas,
