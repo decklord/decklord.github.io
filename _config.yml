@@ -4,7 +4,7 @@
 
 url: http://decklord.github.io
 title: Camilo López A.
-subtitle: Mi blog de programación y otras hiervas
+subtitle: Mi blog de programación, management y filosofía.
 author: Camilo López A.
 simple_search: http://google.com/search
 description:
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email:camilo.lopez.a@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
