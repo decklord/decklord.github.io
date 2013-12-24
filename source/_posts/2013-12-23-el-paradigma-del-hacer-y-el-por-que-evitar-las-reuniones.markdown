@@ -49,7 +49,7 @@ a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender much
 
 {% pullquote left %}
 {"Si asimilas estos libros comprendes que lo importante está en centrarse en 
-el hacer."} El término gringo que me gusta más es *Deliver*. Cuando nos 
+el resolver y ejecutar."} El término gringo que me gusta más es *Deliver*. Cuando nos 
 encontramos en una organización pequeña y con escasos recursos, el típico 
 escenario de Emprendimiento/Startup, **no te puedes dar el lujo de perder 
 el tiempo en burocracia**. 
@@ -78,7 +78,9 @@ La base de este pensamiento proviene del hecho de que en una reunión se *habla 
 No hay nada peor que una reunión a la que estamos obligados a ir en forma periódica. Son dos los grandes motivos:
 
 ####Esperando la reunión
-Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, ¡**keep it simple**!.
+Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, **¡[keep it simple][11]!**.
+
+[11]: http://es.wikipedia.org/wiki/Principio_KISS
 
 ####Calentando el asiento
 La reunión usualmente tiene un periodo de tiempo fijo. Si no tenemos nada que comentar, discutir o proponer, muchas veces la reunión se hace igual con temas intrascendentes, haciendo perder el tiempo a todos.
