@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-24T10:38:29-03:00</updated>
+  <updated>2013-12-24T10:53:42-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -52,9 +52,9 @@ El primer y último punto son claves, el todo-list es tu amigo. Es fundamental p
 a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender muchísimo respecto a estas prácticas, alineadas con lo anterior y a otros paradigmas de los archiconocidos libros <a href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf">Rework</a> y <a href="http://theleanstartup.com/">The Lean Startup</a>.</p>
 
 <p><span class='pullquote-left' data-pullquote='Si asimilas estos libros comprendes que lo importante está en centrarse en
-el hacer.'>
+el resolver y ejecutar.'>
 Si asimilas estos libros comprendes que lo importante está en centrarse en
-el hacer. El término gringo que me gusta más es <em>Deliver</em>. Cuando nos
+el resolver y ejecutar. El término gringo que me gusta más es <em>Deliver</em>. Cuando nos
 encontramos en una organización pequeña y con escasos recursos, el típico
 escenario de Emprendimiento/Startup, <strong>no te puedes dar el lujo de perder
 el tiempo en burocracia</strong>.</p>
@@ -68,7 +68,9 @@ el tiempo en burocracia</strong>.</p>
 
 <h3>¿Nos juntamos en una hora más?</h3>
 
-<p>Ahora bien, las reuniones nos alejan del <em>Deliver</em> pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo: <em>el planificador de planificaciones</em> o más conocido como <strong>el burócrata</strong>. En Rework, Jason Fried y David Heinemeier hacen <a href="http://gettingreal.37signals.com/ch07_Meetings_Are_Toxic.php">hincapié en las reuniones</a>, al punto de referirse a ellas como <strong>eventos tóxicos</strong>.</p>
+<p>Ahora bien, las reuniones nos alejan del <em>Deliver</em> pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle <em>el planificador de planificaciones</em> o más conocido como <em>el burócrata</em>.</p>
+
+<p>En Rework, Jason Fried y David Heinemeier hacen <a href="http://gettingreal.37signals.com/ch07_Meetings_Are_Toxic.php">hincapié en las reuniones</a>, al punto de referirse a ellas como <strong>eventos tóxicos</strong>.</p>
 
 <p><span class='pullquote-right' data-pullquote='No hay nada peor que estar 2 horas en una reunión que podría haber durado 5 minutos, lo más lamentable es que usualmente pasa eso.'>
 La base de este pensamiento proviene del hecho de que en una reunión se <em>habla de lo que se hará</em> pero le quitamos tiempo a lo más importante, <em>el hacer</em>. La reunión debe ser restringida al máximo: el mínimo de personas, el mínimo de tiempo e ir <strong>al callo</strong>. De lo contrario perdemos el control.</p>
@@ -82,7 +84,7 @@ La base de este pensamiento proviene del hecho de que en una reunión se <em>hab
 
 <h4>Esperando la reunión</h4>
 
-<p>Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, ¡<strong>keep it simple</strong>!.</p>
+<p>Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, <strong>¡<a href="http://es.wikipedia.org/wiki/Principio_KISS">keep it simple</a>!</strong>.</p>
 
 <h4>Calentando el asiento</h4>
 
@@ -108,9 +110,11 @@ Si estás en el poder de tomar una decisión sin requerir al resto, házlo y lue
 
 <p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
 
-<p>A pesar de todo, hay ocasiones donde una reunión es necesaria. Un ejemplo pueden ser las situaciones donde se debe llegar a un acuerdo y se requiere de debate y éste tiene una complejidad a tal grado que las actuales tecnologías podrían entorpecer algo de esta envergadura, por ejemplo, una reunión de directorio. Ahora bien, en empresas pequeñas rara vez vemos una situación como ésta. Otro caso válido es hacer brainstorming para buscar soluciones creativas a un problema.</p>
+<p>A pesar de todo, hay ocasiones donde una reunión es necesaria. Un ejemplo pueden ser las situaciones donde se debe llegar a un acuerdo, se requiere de debate y éste tiene una complejidad a tal grado que las actuales tecnologías podrían entorpecer algo de esta envergadura, por ejemplo, una reunión de directorio. Ahora bien, en empresas pequeñas rara vez vemos una situación como ésta. Otro caso válido es hacer brainstorming para buscar soluciones creativas a un problema.</p>
 
-<p>Aún así, evita las reuniones, nos quitan tiempo importante que se puede invertir en hacer cosas concretas. Sé práctico, ejecutor, no burócrata.</p>
+<p><span class='pullquote-left' data-pullquote='Sé práctico, ejecutor, no burócrata.'>
+Aún así, evita las reuniones, nos quitan tiempo importante que se puede invertir en hacer cosas concretas. Sé práctico, ejecutor, no burócrata.
+</span></p>
 
 <p>Si por algún extraño motivo el lector cree que este artículo aplica sólo a informáticos está profundamente errado. <em>Incluso el tip del teclado del principio</em>. Por otro lado, has leído hasta aquí. Te mereces un premio.</p>
 
