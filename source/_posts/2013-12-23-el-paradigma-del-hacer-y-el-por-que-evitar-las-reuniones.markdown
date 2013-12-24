@@ -63,7 +63,9 @@ Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a se
 
 ###¿Nos juntamos en una hora más?
 
-Ahora bien, las reuniones nos alejan del *Deliver* pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo: *el planificador de planificaciones* o más conocido como **el burócrata**. En Rework, Jason Fried y David Heinemeier hacen [hincapié en las reuniones][10], al punto de referirse a ellas como **eventos tóxicos**.
+Ahora bien, las reuniones nos alejan del *Deliver* pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle *el planificador de planificaciones* o más conocido como *el burócrata*. 
+
+En Rework, Jason Fried y David Heinemeier hacen [hincapié en las reuniones][10], al punto de referirse a ellas como **eventos tóxicos**.
 
 [10]: http://gettingreal.37signals.com/ch07_Meetings_Are_Toxic.php
 
@@ -104,9 +106,11 @@ Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no e
 
 Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, *debería ser relativamente breve, para no espantar al lector*, por lo tanto me quedo acá.
 
-A pesar de todo, hay ocasiones donde una reunión es necesaria. Un ejemplo pueden ser las situaciones donde se debe llegar a un acuerdo y se requiere de debate y éste tiene una complejidad a tal grado que las actuales tecnologías podrían entorpecer algo de esta envergadura, por ejemplo, una reunión de directorio. Ahora bien, en empresas pequeñas rara vez vemos una situación como ésta. Otro caso válido es hacer brainstorming para buscar soluciones creativas a un problema.
+A pesar de todo, hay ocasiones donde una reunión es necesaria. Un ejemplo pueden ser las situaciones donde se debe llegar a un acuerdo, se requiere de debate y éste tiene una complejidad a tal grado que las actuales tecnologías podrían entorpecer algo de esta envergadura, por ejemplo, una reunión de directorio. Ahora bien, en empresas pequeñas rara vez vemos una situación como ésta. Otro caso válido es hacer brainstorming para buscar soluciones creativas a un problema.
 
-Aún así, evita las reuniones, nos quitan tiempo importante que se puede invertir en hacer cosas concretas. Sé práctico, ejecutor, no burócrata.
+{% pullquote left%}
+Aún así, evita las reuniones, nos quitan tiempo importante que se puede invertir en hacer cosas concretas. {"Sé práctico, ejecutor, no burócrata."}
+{% endpullquote %}
 
 Si por algún extraño motivo el lector cree que este artículo aplica sólo a informáticos está profundamente errado. *Incluso el tip del teclado del principio*. Por otro lado, has leído hasta aquí. Te mereces un premio.
 
