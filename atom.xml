@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-24T11:04:46-03:00</updated>
+  <updated>2013-12-25T15:06:15-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -18,26 +18,26 @@
     <link href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/"/>
     <updated>2013-12-23T23:25:31-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones</id>
-    <content type="html"><![CDATA[<h3>Getting things done</h3>
+    <content type="html"><![CDATA[<h2>Getting things done</h2>
 
 <p>Hace años que sigo la <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">filosofía GTD</a> gracias al conocido blog <a href="http://lifehacker.com/search?q=gtd">Lifehacker</a>. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:</p>
 
-<ul>
+<ol>
 <li>Transformar gmail en un todo-list dejando en el inbox sólo los emails
 que tengan algo pendiente que resolver.</li>
 <li>La tecnología es tu amiga, sácale el jugo, no seas anticuado sin razón de peso.</li>
 <li>Memoriza los shortcuts de las herramientas que usas, evita el mouse, el teclado siempre es más rápido.</li>
 <li>Automatiza o delega todo lo que puedas.</li>
 <li>Organiza tu espacio de trabajo de la manera más eficiente posible.</li>
-<li>Buscar métodos para entrar rápidamente en la <a href="http://en.wikipedia.org/wiki/Flow_(psychology)"><em>&ldquo;zona&rdquo;</em></a>.</li>
+<li>Buscar métodos para entrar rápidamente en <a href="http://en.wikipedia.org/wiki/Flow_(psychology)">&ldquo;la zona&rdquo;</a>.</li>
 <li>Divide todo lo que tienes que hacer en <a href="http://facilethings.com/blog/en/small-things-first">micro tareas</a> dentro de un todo-list.</li>
-</ul>
+</ol>
 
 
-<p><span class='pullquote-right' data-pullquote='Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.'>
+<p><span class='pullquote-right' data-pullquote='Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo récord.'>
 El primer y último punto son claves, el todo-list es tu amigo. Es fundamental para adoptar la metodología <em>del hacer</em> o <em>resolver</em>. No importa si es en un papel o en un computador. Lo importante es  descomponer tareas grandes, siguiendo el clásico principio de <a href="http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm">dividir para reinar</a>.</p>
 
-<p>El orden también es importante, <strong>de <a href="http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done">la más pequeña a la más compleja</a>, comenzando por lo más fácil</strong>. Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.
+<p>El orden también es importante, <strong>de <a href="http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done">la más pequeña a la más compleja</a>, comenzando por lo más fácil</strong>. Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo récord.
 </span></p>
 
 <p>Ahora bien, ¿Cómo se relaciona esto a las reuniones?
@@ -65,6 +65,8 @@ el tiempo en burocracia</strong>.</p>
 <h3>¿Estás siendo efectivo?</h3>
 
 <p>Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de <em>hacer cosas</em>, <em>resolver</em>, <em>Deliver</em>, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. <strong>¡Estar ocupado no es sinónimo de HACER!</strong>.</p>
+
+<h2>Reuniones</h2>
 
 <h3>¿Nos juntamos en una hora más?</h3>
 
@@ -106,7 +108,7 @@ Si estás en el poder de tomar una decisión sin requerir al resto, házlo y lue
 
 <p>Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero <strong>ejecuta rápido</strong>. Supongo que a esto se le llama <strong>Lean Management</strong>.</p>
 
-<h3>Concluyendo</h3>
+<h2>Concluyendo</h2>
 
 <p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
 

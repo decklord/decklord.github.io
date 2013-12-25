@@ -18,17 +18,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones">
+  <link rel="canonical" href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Camilo López A." type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Camilo López A." type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Playball" rel="stylesheet" type="text/css">
 
   
   <script type="text/javascript">
@@ -46,16 +46,18 @@
 
 </head>
 
-<body   >
+<body>
   <header role="banner"><hgroup>
+  <img src='/images/logo.png'>
   <h1><a href="/">Camilo López A.</a></h1>
   
-    <h2>Mi blog de programación, management y filosofía.</h2>
+    <h2>Mi blog de programación, management y finas hiervas seleccionadas.</h2>
   
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <div id="navigation">
+    <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -70,15 +72,14 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="http://stackoverflow.com/users/845225/clopez">Stack Overflow</a></li>
-  <li><a href="http://cl.linkedin.com/pub/camilo-lópez-a/12/515/149/">Linkedin</a></li>
-  <li><a href="http://www.twitter.com/_clopez">Twitter</a></li>
 </ul>
 
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
+  </div>
+  <div id="body"  >
+    <div id="main">
+      <div id="content">
+        <div>
 <article class="hentry" role="article">
   
   <header>
@@ -101,34 +102,33 @@
 
 <time datetime="2013-12-23T23:25:31-03:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
         
-           | <a href="#disqus_thread"
-             data-disqus-identifier="http://decklord.github.io">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>Getting things done</h3>
+<div class="entry-content"><h2>Getting things done</h2>
 
 <p>Hace años que sigo la <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">filosofía GTD</a> gracias al conocido blog <a href="http://lifehacker.com/search?q=gtd">Lifehacker</a>. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:</p>
 
-<ul>
+<ol>
 <li>Transformar gmail en un todo-list dejando en el inbox sólo los emails
 que tengan algo pendiente que resolver.</li>
 <li>La tecnología es tu amiga, sácale el jugo, no seas anticuado sin razón de peso.</li>
 <li>Memoriza los shortcuts de las herramientas que usas, evita el mouse, el teclado siempre es más rápido.</li>
 <li>Automatiza o delega todo lo que puedas.</li>
 <li>Organiza tu espacio de trabajo de la manera más eficiente posible.</li>
-<li>Buscar métodos para entrar rápidamente en la <a href="http://en.wikipedia.org/wiki/Flow_(psychology)"><em>&ldquo;zona&rdquo;</em></a>.</li>
+<li>Buscar métodos para entrar rápidamente en <a href="http://en.wikipedia.org/wiki/Flow_(psychology)">&ldquo;la zona&rdquo;</a>.</li>
 <li>Divide todo lo que tienes que hacer en <a href="http://facilethings.com/blog/en/small-things-first">micro tareas</a> dentro de un todo-list.</li>
-</ul>
+</ol>
 
 
-<p><span class='pullquote-right' data-pullquote='Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.'>
+<p><span class='pullquote-right' data-pullquote='Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo récord.'>
 El primer y último punto son claves, el todo-list es tu amigo. Es fundamental para adoptar la metodología <em>del hacer</em> o <em>resolver</em>. No importa si es en un papel o en un computador. Lo importante es  descomponer tareas grandes, siguiendo el clásico principio de <a href="http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm">dividir para reinar</a>.</p>
 
-<p>El orden también es importante, <strong>de <a href="http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done">la más pequeña a la más compleja</a>, comenzando por lo más fácil</strong>. Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record.
+<p>El orden también es importante, <strong>de <a href="http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done">la más pequeña a la más compleja</a>, comenzando por lo más fácil</strong>. Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo récord.
 </span></p>
 
 <p>Ahora bien, ¿Cómo se relaciona esto a las reuniones?
@@ -156,6 +156,8 @@ el tiempo en burocracia</strong>.</p>
 <h3>¿Estás siendo efectivo?</h3>
 
 <p>Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de <em>hacer cosas</em>, <em>resolver</em>, <em>Deliver</em>, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. <strong>¡Estar ocupado no es sinónimo de HACER!</strong>.</p>
+
+<h2>Reuniones</h2>
 
 <h3>¿Nos juntamos en una hora más?</h3>
 
@@ -197,7 +199,7 @@ Si estás en el poder de tomar una decisión sin requerir al resto, házlo y lue
 
 <p>Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero <strong>ejecuta rápido</strong>. Supongo que a esto se le llama <strong>Lean Management</strong>.</p>
 
-<h3>Concluyendo</h3>
+<h2>Concluyendo</h2>
 
 <p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
 
@@ -237,7 +239,7 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/deliver/'>deliver</a>, <a class='category' href='/blog/categories/management/'>management</a>, <a class='category' href='/blog/categories/meetings/'>meetings</a>, <a class='category' href='/blog/categories/rework/'>rework</a>, <a class='category' href='/blog/categories/team-work/'>team-work</a>
+    <a class='category' href='/blog/categories/deliver/'>deliver</a>, <a class='category' href='/blog/categories/kiss/'>kiss</a>, <a class='category' href='/blog/categories/lean/'>lean</a>, <a class='category' href='/blog/categories/management/'>management</a>, <a class='category' href='/blog/categories/meetings/'>meetings</a>, <a class='category' href='/blog/categories/rework/'>rework</a>, <a class='category' href='/blog/categories/startup/'>startup</a>, <a class='category' href='/blog/categories/team-work/'>team-work</a>
   
 </span>
 
@@ -245,8 +247,6 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
     </p>
     
       <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/" data-via="_clopez" data-counturl="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/" >Tweet</a>
   
   
   
@@ -274,8 +274,24 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
 
 <aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
+    
+<section>
+  
+    <br/>
+    <a href="https://twitter.com/_clopez" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="large">Seguir a @_clopez</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  
+  
+    <br/>
+    <br/>
+    <a class='stackoverflow' href="http://stackoverflow.com/users/845225/clopez">
+    <img src="http://stackoverflow.com/users/flair/845225.png?theme=default" width="208" height="58" alt="profile for clopez at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for clopez at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+    </a>
+  
+</section>
+
+<section>
+  <h1>Últimos Artículos</h1>
   <ul id="recent_posts">
     
       <li class="post">
@@ -302,29 +318,26 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
 </section>
 
 <section>
-  <h1>GitHub</h1>
+  <h1>GitHub Repos</h1>
   
   <a href="https://github.com/decklord">@decklord</a> on GitHub
   
 </section>
 
 
-
-
-
   
 </aside>
 
 
+      </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
+    <footer role="contentinfo"><p>
   Copyright &copy; 2013 - Camilo López A. -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>. Design by <a href="http://octopressthemes.com">Octopress Themes</a></span>
 </p>
 
 </footer>
-  
+    
 
 <script type="text/javascript">
       var disqus_shortname = 'decklord';
@@ -337,7 +350,7 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -348,7 +361,7 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async = true;
+  js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
@@ -362,7 +375,7 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
@@ -371,5 +384,6 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
 
 
 
+  </div>
 </body>
 </html>
