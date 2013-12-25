@@ -3,24 +3,24 @@ layout: post
 title: "El paradigma del hacer y el por qué evitar las reuniones"
 date: 2013-12-23 23:25:31 -0300
 comments: true
-categories: management team-work meetings rework deliver
+categories: management team-work meetings rework deliver lean startup kiss
 ---
 
-###Getting things done
+##Getting things done
 
 Hace años que sigo la [filosofía GTD][1] gracias al conocido blog [Lifehacker][2]. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:
 
 [1]: http://en.wikipedia.org/wiki/Getting_Things_Done
 [2]: http://lifehacker.com/search?q=gtd
 
-* Transformar gmail en un todo-list dejando en el inbox sólo los emails
+1. Transformar gmail en un todo-list dejando en el inbox sólo los emails
 que tengan algo pendiente que resolver.
-* La tecnología es tu amiga, sácale el jugo, no seas anticuado sin razón de peso.
-* Memoriza los shortcuts de las herramientas que usas, evita el mouse, el teclado siempre es más rápido.
-* Automatiza o delega todo lo que puedas.
-* Organiza tu espacio de trabajo de la manera más eficiente posible.
-* Buscar métodos para entrar rápidamente en la [*"zona"*][3].
-* Divide todo lo que tienes que hacer en [micro tareas][4] dentro de un todo-list.
+2. La tecnología es tu amiga, sácale el jugo, no seas anticuado sin razón de peso.
+3. Memoriza los shortcuts de las herramientas que usas, evita el mouse, el teclado siempre es más rápido.
+4. Automatiza o delega todo lo que puedas.
+5. Organiza tu espacio de trabajo de la manera más eficiente posible.
+6. Buscar métodos para entrar rápidamente en ["la zona"][3].
+7. Divide todo lo que tienes que hacer en [micro tareas][4] dentro de un todo-list.
 
 [3]: http://en.wikipedia.org/wiki/Flow_(psychology)
 [4]: http://facilethings.com/blog/en/small-things-first
@@ -29,7 +29,7 @@ que tengan algo pendiente que resolver.
 El primer y último punto son claves, el todo-list es tu amigo. Es fundamental para adoptar la metodología *del hacer* o *resolver*. No importa si es en un papel o en un computador. Lo importante es  descomponer tareas grandes, siguiendo el clásico principio de [dividir para reinar][5].
 
 [5]: http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm
-El orden también es importante, **de [la más pequeña a la más compleja][6], comenzando por lo más fácil**. {"Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo record."}
+El orden también es importante, **de [la más pequeña a la más compleja][6], comenzando por lo más fácil**. {"Terminar las tareas pequeñas te permite obtener la sensación de estar avanzando, es un detalle sutil pero tiene un impacto tremendo en la motivación al hacer cosas y terminarlas en tiempo récord."}
 {% endpullquote %}
 
 [6]: http://99u.com/articles/19139/start-small-why-tinkerers-get-things-done
@@ -61,6 +61,7 @@ El que pierde el tiempo quiebra, así de simple. ¿Por qué? porque no tienes o 
 
 Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de *hacer cosas*, *resolver*, *Deliver*, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. **¡Estar ocupado no es sinónimo de HACER!**.
 
+##Reuniones
 ###¿Nos juntamos en una hora más?
 
 Ahora bien, las reuniones nos alejan del *Deliver* pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle *el planificador de planificaciones* o más conocido como *el burócrata*. 
@@ -102,7 +103,7 @@ Es mejor pedir perdón que pedir permiso.
 {% endblockquote %}
 Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero **ejecuta rápido**. Supongo que a esto se le llama **Lean Management**.
 
-###Concluyendo
+##Concluyendo
 
 Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, *debería ser relativamente breve, para no espantar al lector*, por lo tanto me quedo acá.
 

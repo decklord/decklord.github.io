@@ -1,2 +1,159 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+
+$dark-blue: #171b22;
+$pink-red: #dd5363;
+$calypso: #54a1af;
+$grey-blue: #282e39;
+
+$light-pink-red: #db969e;
+$light-blue: #b5c2cf;
+$light-purple: #9c59af;
+$light-white: rgb(214, 214, 214);
+
+html, #navigation, nav, #body > div, article {
+    background-color: $grey-blue;
+}
+
+body {
+    color: $light-blue;
+    >header {
+        background-color: $dark-blue;
+        hgroup {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.pullquote-right:before, .pullquote-left:before {
+    color: $calypso;
+    font-size: 1.3em;
+    line-height: 1.30em;
+    font-family: "Arvo","Georgia","Helvetica Neue",Arial,sans-serif;
+}
+
+blockquote {
+    color: $calypso;
+    border-color: $calypso;
+    padding-left: 2em;
+}
+
+blockquote:before {
+    display: block;
+    font-size: 300%;
+    content: "\201C";
+    height: 1px;
+    margin-left: -0.55em;
+    position: relative;
+    top: 11px;
+}
+
+hgroup {
+    h1, h2 {
+        text-align: left;
+    }
+    h1 {
+        padding-top: 30px;
+    }
+    $logo-size: 115px;
+    img {
+        width: $logo-size;
+        height: $logo-size;
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $calypso;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+strong {
+    font-weight: 500;
+    color: $light-pink-red;
+}
+
+em {
+    font-weight: 100;
+    font-style: italic;
+    color: $light-pink-red;
+    letter-spacing: 2px;
+}
+
+.entry-content {
+    font-family: 'Vollkorn', Palatino, Times;
+    line-height: 1.4;
+    text-align: justify;
+    ol {
+        counter-reset: item;
+        margin-left: 50px;
+        padding-left: 0;
+    }
+    li {
+        display: block;
+        margin-bottom: 1.0em;
+        margin-left: 2em;
+        line-height: 1;
+        width: 70%;
+        color: $light-pink-red;
+        a, a:visited {
+            color: $calypso;
+            text-decoration: underline;
+        }
+    }
+    li:before {
+        display: inline-block;
+        content: counter(item) ".";
+        counter-increment: item;
+        width: 1.5em;
+        margin-left: -1.5em;
+        font-size: 180%;
+        color: white;
+    }
+}
+
+strong a, strong a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+em a, em a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a, a:visited {
+    color: $calypso;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article img {
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: #fff 2.5em solid;
+}
+
+aside.sidebar a.stackoverflow {
+    white-space: normal;
+}
