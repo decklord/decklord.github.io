@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: frontend | Camilo López A.]]></title>
+  <link href="http://decklord.github.io/blog/categories/frontend/atom.xml" rel="self"/>
+  <link href="http://decklord.github.io/"/>
+  <updated>2013-12-31T20:34:15-03:00</updated>
+  <id>http://decklord.github.io/</id>
+  <author>
+    <name><![CDATA[Camilo López A.]]></name>
+    <email><![CDATA[camilo.lopez.a@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[¡Nunca más escribas HTML!]]></title>
+    <link href="http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/"/>
+    <updated>2013-12-31T19:09:52-03:00</updated>
+    <id>http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css</id>
+    <content type="html"><![CDATA[<h1>TL;DR</h1>
+
+<h6>Too long, didn&rsquo;t read</h6>
+
+<p>Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo.</p>
+
+<h1>Les presento HAML</h1>
+
+<p>Probablemente si no eres desarrollador las siglas <em>HTML</em>, <em>CSS</em>, <em>HAML</em> o <em>SASS</em> no tendrán ningún sentido. Si es así, recomiendo dejar de leer este artículo pues va orientado a programadores. Ahora bien, si eres programador y no te suena lo que es <em>HAML</em>, te recomiendo de inmediato reemplazar <em>HTML</em> por esta maravillosa herramienta.</p>
+
+<p>Para los desarrolladores de <em>Ruby</em> posiblemente esto es archiconocido, pero para los que estamos en el mundo de <em>python</em> y <em>Django</em> es toda una novedad, al menos para mí.</p>
+
+<!-- more -->
+
+
+<h1>Descubriendo la herramienta</h1>
+
+<p>Hace unos días me entretenía programando una app web para análisis de texto y estaba absolutamente intoxicado escribiendo <em>HTML</em> para la parte de la interfaz gráfica. En ese minuto de colapso decidí buscar si existía algúna forma de escribir <em>HTML</em> un poco más amigable, como <em>CSS</em> usando <em>LESS</em> o <em>SASS</em>.</p>
+
+<p>Típico que tienes un <em>HTML</em> enorme, desordenado y muy difícil de leer. De alguna forma es muy complejo mantener las reglas del buen programador a la hora de hacer un template en <em>HTML</em> por que el idioma no lo permite, sencillamente es feo. Personalmente yo culpo de esto a los tags de cerrado y a las miles de repeticiones: div div div div div div (más de ésto después).</p>
+
+<p>Mi primer resultado en <a href="http://lmgtfy.com/?q=sass+equivalent+for+html">Google</a> fue <a href="http://haml.info/">HAML</a> y vi la luz. Nativamente está para Ruby, pero existe su equivalente en Django: <a href="https://github.com/jessemiller/HamlPy">HamlPy</a> escrito por <a href="https://github.com/jessemiller">Jesse Miller</a> y que funciona <em>out of the box</em> con dos líneas de configuración en el <em>settings.py</em>.</p>
+
+<h1>No querrás volver atrás</h1>
+
+<p>La syntaxis cambia brutalmente por tres razones. La primera es que <strong>pythonizamos el HTML</strong>. Una de las cosas geniales de Python es que no usa llaves, en su lugar el lenguaje te fuerza a seguir una indentación determinada y ser consistente en ello, por esto se evita el típico problema de: <em>¿Qué llave cierra qué cosa?</em>. HAML nos da este poder en HTML, por lo tanto, <strong>te olvidas de cerrar los tags</strong>, ¡Que maravilla!.</p>
+
+<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón, JSON, indentación forzada, no más tags de cierres. Todo esto converge en un template legible, ordenado y mantenible.</p>
+
+<p>El tercer punto es que sigue un gran principio: <em>DRY, don&rsquo;t repeat yourself</em>. Antiguamente para diagramar sitios web se usaban tablas. Luego, con las hojas de estilo <em>CSS</em> todo lo anterior se transformaron en miles de <em>divs</em>, transformándose en el tag más repetido por lejos. ¿Te imaginas no tener que repetir esto mil veces? Adivina&hellip;</p>
+
+<h1>Las manos en la masa, ejemplos</h1>
+
+<p>Ahora veamos algunos ejemplos de la utilización de HAML.</p>
+
+<h2>No mas divs.</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small hola
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+es equivalente a:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;small&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>    hola
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<em>wooooow</em></p>
+
+<h2>Anidando elementos</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small
+</span><span class='line'>  %ul<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;pre&gt;&lt;code&gt;</span>%li
+</span><span class='line'>  %p Estoy anidado
+</span><span class='line'><span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Es equivalente a:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;small&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;p&gt;</span>Estoy anidado<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>¿Parámetros?</h2>
+
+<p>Para agregar propiedades a un elemento html usamos <em>JSON</em>:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>%input{<span class="ni">&amp;lsquo;</span>type<span class="ni">&amp;rsquo;</span>:<span class="ni">&amp;lsquo;</span>text<span class="ni">&amp;rsquo;</span>, <span class="ni">&amp;lsquo;</span>name<span class="ni">&amp;rsquo;</span>:<span class="ni">&amp;lsquo;</span>dirty_text_field<span class="ni">&amp;rsquo;</span>}
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Es equivalente a:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&#39;text&#39;</span> <span class="na">name=</span><span class="s">&#39;dirty_text_field&#39;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Anidando clases y ids</h2>
+
+<p>Se pueden anidar clases o ids escribiéndolos uno tras otro, incluso con parámetros:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small.blue.left#user-name{<span class="ni">&amp;lsquo;</span>placeholder<span class="ni">&amp;rsquo;</span>:<span class="ni">&amp;lsquo;</span>something<span class="ni">&amp;rsquo;</span>}
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Es equivalente a:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;user-name&#39;</span> <span class="na">class=</span><span class="s">&#39;small blue left&#39;</span> <span class="na">placeholder=</span><span class="s">&#39;something&#39;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h1>Conclusiones</h1>
+
+<p>Llevo usando <em>HamlPy</em> desde hace una semana y estoy encantado, vale la pena aprender la syntaxis y pasar por el breve setup inicial, ahora escribo código <em>HTML</em> mucho más rápido y editarlo se hace muy sencillo. Los invito a ver el proyecto en <a href="https://github.com/jessemiller/HamlPy">GitHub</a> y probarlo ustedes mismos.</p>
+
+<p>Hasta la próxima.</p>
+]]></content>
+  </entry>
+  
+</feed>

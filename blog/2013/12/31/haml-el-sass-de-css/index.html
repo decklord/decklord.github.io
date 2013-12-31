@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>enumerateObjectsUsingBlock, loops prácticos en Objective-C - Camilo López A.</title>
+  <title>¡Nunca más escribas HTML! - Camilo López A.</title>
   <meta name="author" content="Camilo López A.">
 
   
-  <meta name="description" content="Hace unos días estaba leyendo NSHipster de
-Matt Thompson y descubrí un buen post
-acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
+  <meta name="description" content="TL;DR Too long, didn&rsquo;t read Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo. Les presento HAML Probablemente si &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/">
+  <link rel="canonical" href="http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -86,7 +84,7 @@ acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   
   <header>
     
-      <h1 class="entry-title">enumerateObjectsUsingBlock, loops prácticos en Objective-C</h1>
+      <h1 class="entry-title">¡Nunca más escribas HTML!</h1>
     
     
       <p class="meta">
@@ -102,7 +100,7 @@ acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   
 
 
-<time datetime="2013-07-11T20:06:59-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2013</time>
+<time datetime="2013-12-31T19:09:52-03:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -111,48 +109,75 @@ acerca de enumerators. En el mencionaban como hacer un loop usando &hellip;">
   </header>
 
 
-<div class="entry-content"><p>Hace unos días estaba leyendo <a href="http://nshipster.com/">NSHipster</a> de
-<a href="http://mattt.me/">Matt Thompson</a> y descubrí un buen post
-acerca de <em>enumerators</em>. En el mencionaban como hacer un loop usando <strong>enumerateObjectsUsingBlock</strong>.</p>
+<div class="entry-content"><h1>TL;DR</h1>
+
+<h6>Too long, didn&rsquo;t read</h6>
+
+<p>Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo.</p>
+
+<h1>Les presento HAML</h1>
+
+<p>Probablemente si no eres desarrollador las siglas <em>HTML</em>, <em>CSS</em>, <em>HAML</em> o <em>SASS</em> no tendrán ningún sentido. Si es así, recomiendo dejar de leer este artículo pues va orientado a programadores. Ahora bien, si eres programador y no te suena lo que es <em>HAML</em>, te recomiendo de inmediato reemplazar <em>HTML</em> por esta maravillosa herramienta.</p>
+
+<p>Para los desarrolladores de <em>Ruby</em> posiblemente esto es archiconocido, pero para los que estamos en el mundo de <em>python</em> y <em>Django</em> es toda una novedad, al menos para mí.</p>
 
 <!-- more -->
 
 
-<h2>Iterando sobre objetos</h2>
+<h1>Descubriendo la herramienta</h1>
 
-<p>La típica forma de iterar sobre un objeto es la siguiente:</p>
+<p>Hace unos días me entretenía programando una app web para análisis de texto y estaba absolutamente intoxicado escribiendo <em>HTML</em> para la parte de la interfaz gráfica. En ese minuto de colapso decidí buscar si existía algúna forma de escribir <em>HTML</em> un poco más amigable, como <em>CSS</em> usando <em>LESS</em> o <em>SASS</em>.</p>
+
+<p>Típico que tienes un <em>HTML</em> enorme, desordenado y muy difícil de leer. De alguna forma es muy complejo mantener las reglas del buen programador a la hora de hacer un template en <em>HTML</em> por que el idioma no lo permite, sencillamente es feo. Personalmente yo culpo de esto a los tags de cerrado y a las miles de repeticiones: div div div div div div (más de ésto después).</p>
+
+<p>Mi primer resultado en <a href="http://lmgtfy.com/?q=sass+equivalent+for+html">Google</a> fue <a href="http://haml.info/">HAML</a> y vi la luz. Nativamente está para Ruby, pero existe su equivalente en Django: <a href="https://github.com/jessemiller/HamlPy">HamlPy</a> escrito por <a href="https://github.com/jessemiller">Jesse Miller</a> y que funciona <em>out of the box</em> con dos líneas de configuración en el <em>settings.py</em>.</p>
+
+<h1>No querrás volver atrás</h1>
+
+<p>La syntaxis cambia brutalmente por tres razones. La primera es que <strong>pythonizamos el HTML</strong>. Una de las cosas geniales de Python es que no usa llaves, en su lugar el lenguaje te fuerza a seguir una indentación determinada y ser consistente en ello, por esto se evita el típico problema de: <em>¿Qué llave cierra qué cosa?</em>. HAML nos da este poder en HTML, por lo tanto, <strong>te olvidas de cerrar los tags</strong>, ¡Que maravilla!.</p>
+
+<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón, JSON, indentación forzada, no más tags de cierres. Todo esto converge en un template legible, ordenado y mantenible.</p>
+
+<p>El tercer punto es que sigue un gran principio: <em>DRY, don&rsquo;t repeat yourself</em>. Antiguamente para diagramar sitios web se usaban tablas. Luego, con las hojas de estilo <em>CSS</em> todo lo anterior se transformaron en miles de <em>divs</em>, transformándose en el tag más repetido por lejos. ¿Te imaginas no tener que repetir esto mil veces? Adivina&hellip;</p>
+
+<h1>Las manos en la masa, ejemplos</h1>
+
+<p>Ahora veamos algunos ejemplos de la utilización de HAML.</p>
+
+<h2>No mas divs.</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small hola
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>es equivalente a:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;small&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>    hola
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>wooooow</em></p>
+
+<h2>Anidando elementos</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">someArray</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSArray</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="o">=</span> <span class="p">[</span><span class="n">someArray</span> <span class="nl">objectAtIndex:</span><span class="n">i</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small
+</span><span class='line'>  %ul
+</span><span class='line'>    %li
+</span><span class='line'>      %p Estoy anidado
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Lo malo es que esta forma es un poco engorrosa, pues hay que buscar el
-objeto usando el <em>índice <strong>i</strong></em>. Cuando no nos importa usar el índice lo ideal
-es utilizar el modo <em>&ldquo;forin&rdquo;</em>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="k">in</span> <span class="n">someArray</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">object</span> <span class="n">someMethod</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Esta forma es mucho mas sencilla y limpia, utiliza <em>NSFastEnumeration</em> en su
-implementación, la cual es la manera más rápida de iterar sobre un objeto en
-Objective-C, incluso mas rápido que usar un <em>for/while</em> en C.</p>
-
-<p>Ahora bien, ¿qué pasa cuando queremos usar este tipo de <em>for</em> y además queremos
-utilizar el índice? Volvemos a algo similar al primer ejemplo, o incluso peor.
-Se define el indice fuera del ciclo, de la siguiente manera:</p>
+<p>Es equivalente a:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -160,45 +185,54 @@ Se define el indice fuera del ciclo, de la siguiente manera:</p>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">NSObject</span> <span class="o">*</span><span class="n">object</span> <span class="k">in</span> <span class="n">someArray</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">object</span> <span class="n">someMethod</span><span class="p">];</span>
-</span><span class='line'>    <span class="c1">//Do something with i</span>
-</span><span class='line'>    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;small&#39;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;li&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;p&gt;</span>Estoy anidado<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Una forma más limpia</h2>
+<h2>¿Parámetros?</h2>
 
-<p>En Objective-C existe una forma de declarar el índice y tener el objeto en
-una sola línea, esto se hace utilizando <strong>enumerateObjectsUsingBlock</strong>.</p>
+<p>Para agregar propiedades a un elemento html usamos <em>JSON</em>:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">someArray</span> <span class="nl">enumerateObjectsUsingBlock:</span><span class="o">^</span><span class="p">(</span><span class="kt">id</span> <span class="n">object</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">i</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">object</span><span class="p">);</span>
-</span><span class='line'><span class="p">}];</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>%input{&#39;type&#39;:&#39;text&#39;, &#39;name&#39;:&#39;dirty_text_field&#39;}
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Esta disponible para <em>NSArray, NSSet, NSDictionary y NSIndexSet</em>. Con esta
-manera nos olvidamos de declarar variables auxiliares.</p>
-
-<p>El equivalente al <em>break</em> en este tipo de loops en hacer que la variable <em>stop</em>
-tenga el valor <em>True</em>.</p>
-
-<p>Una característica interesante de enumerateObjectsUsingBlock es su variante:</p>
+<p>Es equivalente a:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="nl">enumerateObjectsWithOptions:usingBlock:</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&#39;text&#39;</span> <span class="na">name=</span><span class="s">&#39;dirty_text_field&#39;</span> <span class="nt">/&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>La cual puede recibir un parámetro de tipo <em>NSEnumerationOptions</em>.
-Se puede, entre otras cosas, revertir el orden en el que se recorren los
-elementos usando <em>NSEnumerationReverse</em>.</p>
+<h2>Anidando clases y ids</h2>
+
+<p>Se pueden anidar clases o ids escribiéndolos uno tras otro, incluso con parámetros:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>.small.blue.left#user-name{&#39;placeholder&#39;:&#39;something&#39;}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Es equivalente a:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;user-name&#39;</span> <span class="na">class=</span><span class="s">&#39;small blue left&#39;</span> <span class="na">placeholder=</span><span class="s">&#39;something&#39;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Conclusiones</h1>
+
+<p>Llevo usando <em>HamlPy</em> desde hace una semana y estoy encantado, vale la pena aprender la syntaxis y pasar por el breve setup inicial, ahora escribo código <em>HTML</em> mucho más rápido y editarlo se hace muy sencillo. Los invito a ver el proyecto en <a href="https://github.com/jessemiller/HamlPy">GitHub</a> y probarlo ustedes mismos.</p>
+
+<p>Hasta la próxima.</p>
 </div>
 
 
@@ -221,8 +255,14 @@ elementos usando <em>NSEnumerationReverse</em>.</p>
   
 
 
-<time datetime="2013-07-11T20:06:59-04:00" pubdate data-updated="true">Jul 11<span>th</span>, 2013</time>
+<time datetime="2013-12-31T19:09:52-03:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/haml/'>HAML</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/frontend/'>frontend</a>
+  
+</span>
 
 
     </p>
@@ -238,10 +278,8 @@ elementos usando <em>NSEnumerationReverse</em>.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/07/11/how-to-load-your-app-into-a-remote-mobile-phone-using-itunes/" title="Previous Post: Como cargar tu app en un iPhone usando iTunes">&laquo; Como cargar tu app en un iPhone usando iTunes</a>
+        <a class="basic-alignment left" href="/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/" title="Previous Post: El paradigma del hacer y el por qué evitar las reuniones">&laquo; El paradigma del hacer y el por qué evitar las reuniones</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/09/11/how-to-save-and-load-cookies-on-objective-c-when/" title="Next Post: Guardar y cargar cookies en Objective-C">Guardar y cargar cookies en Objective-C &raquo;</a>
       
     </p>
   </footer>
@@ -327,8 +365,8 @@ elementos usando <em>NSEnumerationReverse</em>.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/';
-        var disqus_url = 'http://decklord.github.io/blog/2013/07/11/an-useful-way-to-loop-in-objective-c-using/';
+        var disqus_identifier = 'http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/';
+        var disqus_url = 'http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/';
         var disqus_script = 'embed.js';
       
     (function () {
