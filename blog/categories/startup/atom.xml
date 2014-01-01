@@ -4,7 +4,7 @@
   <title><![CDATA[Category: startup | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/startup/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-31T20:34:15-03:00</updated>
+  <updated>2013-12-31T21:31:25-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -18,7 +18,7 @@
     <link href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/"/>
     <updated>2013-12-23T23:25:31-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones</id>
-    <content type="html"><![CDATA[<h2>Getting things done</h2>
+    <content type="html"><![CDATA[<h1>Getting things done</h1>
 
 <p>Hace años que sigo la <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">filosofía GTD</a> gracias al conocido blog <a href="http://lifehacker.com/search?q=gtd">Lifehacker</a>. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:</p>
 
@@ -42,20 +42,20 @@ que tengan algo pendiente que resolver.</li>
 <!-- more -->
 
 
-<h3>La filosofía del hacer</h3>
+<h2>La filosofía del hacer</h2>
 
 <p>Tuve la oportunidad de participar en el programa <a href="http://www.techstars.com/program/locations/nyc/">TechStars, en NY</a>
 a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender muchísimo respecto a estas prácticas, alineadas con lo anterior y a otros paradigmas de los archiconocidos libros <a href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf">Rework</a> y <a href="http://theleanstartup.com/">The Lean Startup</a>.</p>
 
 <p>Surround your pullquote like this {" text to be quoted "}</p>
 
-<h3>¿Estás siendo efectivo?</h3>
+<h2>¿Estás siendo efectivo?</h2>
 
 <p>Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de <em>hacer cosas</em>, <em>resolver</em>, <em>Deliver</em>, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. <strong>¡Estar ocupado no es sinónimo de HACER!</strong>.</p>
 
-<h2>Reuniones</h2>
+<h1>Reuniones</h1>
 
-<h3>¿Nos juntamos en una hora más?</h3>
+<h2>¿Nos juntamos en una hora más?</h2>
 
 <p>Ahora bien, las reuniones nos alejan del <em>Deliver</em> pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle <em>el planificador de planificaciones</em> o más conocido como <em>el burócrata</em>.</p>
 
@@ -63,15 +63,15 @@ a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender much
 
 <p>Surround your pullquote like this {" text to be quoted "}</p>
 
-<h3>El caso más dramático, la reunión periódica</h3>
+<h2>El caso más dramático, la reunión periódica</h2>
 
 <p>No hay nada peor que una reunión a la que estamos obligados a ir en forma periódica. Son dos los grandes motivos:</p>
 
-<h4>Esperando la reunión</h4>
+<h3>Esperando la reunión</h3>
 
 <p>Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, <strong>¡<a href="http://es.wikipedia.org/wiki/Principio_KISS">keep it simple</a>!</strong>.</p>
 
-<h4>Calentando el asiento</h4>
+<h3>Calentando el asiento</h3>
 
 <p>La reunión usualmente tiene un periodo de tiempo fijo. Si no tenemos nada que comentar, discutir o proponer, muchas veces la reunión se hace igual con temas intrascendentes, haciendo perder el tiempo a todos.</p>
 
@@ -88,7 +88,7 @@ Si estás en el poder de tomar una decisión sin requerir al resto, házlo y lue
 <blockquote><p>Es mejor pedir perdón que pedir permiso.</p></blockquote>
 Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero <strong>ejecuta rápido</strong>. Supongo que a esto se le llama <strong>Lean Management</strong>.</p>
 
-<h2>Concluyendo</h2>
+<h1>Concluyendo</h1>
 
 <p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: if | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/if/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-31T20:34:15-03:00</updated>
+  <updated>2013-12-31T21:31:25-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -18,7 +18,11 @@
     <link href="http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente/"/>
     <updated>2013-12-21T01:25:29-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente</id>
-    <content type="html"><![CDATA[<h3>Los Condicionales</h3>
+    <content type="html"><![CDATA[<h1>TL;DR</h1>
+
+<p>Escribir un if es clave, hacerlo bien es absolutamente importante. Aquí hay algunos tips para ordenar las cosas.</p>
+
+<h1>Los Condicionales</h1>
 
 <p>En la vida del desarrollador es necesario definir muchos condicionales. Con
 <em>condicionales</em> nos refierimos a escribir un <em>if</em> en partes del código, lo cual
@@ -36,7 +40,7 @@ parecer son claves de considerar.</p>
 <!-- more -->
 
 
-<h3>Condiciones engorrosas</h3>
+<h1>Condiciones engorrosas</h1>
 
 <p>Ahora bien, ¿qué implica <em>buenos</em> o <em>malos</em> condicionales? Pongámoslo en un
 ejemplo, supongamos que queremos validar un formulario de registro y nos llega
@@ -183,7 +187,7 @@ de lo que hacemos al tener dos líneas cortas y claras.</p>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h3>Muchas validaciones</h3>
+<h1>Muchas validaciones</h1>
 
 <p>En ocasiones hay que validar muchas cosas para obtener un output concreto:
 Que el string contenga o no contenga algún parámetro, que sea de cierto tipo de
@@ -227,7 +231,7 @@ Tampoco cabe en la pantalla, por lo tanto estamos violando <a href="http://progr
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
 
-<h4>Agrupando condiciones en variables boolean autoexplicativas</h4>
+<h2>Agrupando condiciones en variables boolean autoexplicativas</h2>
 
 <p>Una manera de simplificar la legibilidad de un set de condiciones es unirlas en
 variables boolean. Por ejemplo:</p>

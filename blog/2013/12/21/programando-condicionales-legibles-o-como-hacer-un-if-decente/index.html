@@ -9,8 +9,7 @@
   <meta name="author" content="Camilo López A.">
 
   
-  <meta name="description" content="Los Condicionales En la vida del desarrollador es necesario definir muchos condicionales. Con
-condicionales nos refierimos a escribir un if en partes &hellip;">
+  <meta name="description" content="TL;DR Escribir un if es clave, hacerlo bien es absolutamente importante. Aquí hay algunos tips para ordenar las cosas. Los Condicionales En la vida &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,7 +109,11 @@ condicionales nos refierimos a escribir un if en partes &hellip;">
   </header>
 
 
-<div class="entry-content"><h3>Los Condicionales</h3>
+<div class="entry-content"><h1>TL;DR</h1>
+
+<p>Escribir un if es clave, hacerlo bien es absolutamente importante. Aquí hay algunos tips para ordenar las cosas.</p>
+
+<h1>Los Condicionales</h1>
 
 <p>En la vida del desarrollador es necesario definir muchos condicionales. Con
 <em>condicionales</em> nos refierimos a escribir un <em>if</em> en partes del código, lo cual
@@ -128,7 +131,7 @@ parecer son claves de considerar.</p>
 <!-- more -->
 
 
-<h3>Condiciones engorrosas</h3>
+<h1>Condiciones engorrosas</h1>
 
 <p>Ahora bien, ¿qué implica <em>buenos</em> o <em>malos</em> condicionales? Pongámoslo en un
 ejemplo, supongamos que queremos validar un formulario de registro y nos llega
@@ -234,7 +237,7 @@ de lo que hacemos al tener dos líneas cortas y claras.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Muchas validaciones</h3>
+<h1>Muchas validaciones</h1>
 
 <p>En ocasiones hay que validar muchas cosas para obtener un output concreto:
 Que el string contenga o no contenga algún parámetro, que sea de cierto tipo de
@@ -269,7 +272,7 @@ Tampoco cabe en la pantalla, por lo tanto estamos violando <a href="http://progr
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
 
-<h4>Agrupando condiciones en variables boolean autoexplicativas</h4>
+<h2>Agrupando condiciones en variables boolean autoexplicativas</h2>
 
 <p>Una manera de simplificar la legibilidad de un set de condiciones es unirlas en
 variables boolean. Por ejemplo:</p>

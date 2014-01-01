@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HAML | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-31T20:34:15-03:00</updated>
+  <updated>2013-12-31T21:31:25-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -18,9 +18,9 @@
     <link href="http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/"/>
     <updated>2013-12-31T19:09:52-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css</id>
-    <content type="html"><![CDATA[<h1>TL;DR</h1>
+    <content type="html"><![CDATA[<p><img src="/images/posts/2013_12_31.jpg" alt="" /></p>
 
-<h6>Too long, didn&rsquo;t read</h6>
+<h1>TL;DR</h1>
 
 <p>Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo.</p>
 
@@ -45,7 +45,7 @@
 
 <p>La syntaxis cambia brutalmente por tres razones. La primera es que <strong>pythonizamos el HTML</strong>. Una de las cosas geniales de Python es que no usa llaves, en su lugar el lenguaje te fuerza a seguir una indentación determinada y ser consistente en ello, por esto se evita el típico problema de: <em>¿Qué llave cierra qué cosa?</em>. HAML nos da este poder en HTML, por lo tanto, <strong>te olvidas de cerrar los tags</strong>, ¡Que maravilla!.</p>
 
-<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón, JSON, indentación forzada, no más tags de cierres. Todo esto converge en un template legible, ordenado y mantenible.</p>
+<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón: JSON, indentación forzada, no más tags de cierres. Todo converge en un template legible, ordenado y mantenible.</p>
 
 <p>El tercer punto es que sigue un gran principio: <em>DRY, don&rsquo;t repeat yourself</em>. Antiguamente para diagramar sitios web se usaban tablas. Luego, con las hojas de estilo <em>CSS</em> todo lo anterior se transformaron en miles de <em>divs</em>, transformándose en el tag más repetido por lejos. ¿Te imaginas no tener que repetir esto mil veces? Adivina&hellip;</p>
 

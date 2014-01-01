@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-31T20:34:15-03:00</updated>
+  <updated>2013-12-31T21:31:25-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -18,9 +18,9 @@
     <link href="http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css/"/>
     <updated>2013-12-31T19:09:52-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/31/haml-el-sass-de-css</id>
-    <content type="html"><![CDATA[<h1>TL;DR</h1>
+    <content type="html"><![CDATA[<p><img src="http://decklord.github.io/images/posts/2013_12_31.jpg" alt="" /></p>
 
-<h6>Too long, didn&rsquo;t read</h6>
+<h1>TL;DR</h1>
 
 <p>Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo.</p>
 
@@ -45,7 +45,7 @@
 
 <p>La syntaxis cambia brutalmente por tres razones. La primera es que <strong>pythonizamos el HTML</strong>. Una de las cosas geniales de Python es que no usa llaves, en su lugar el lenguaje te fuerza a seguir una indentación determinada y ser consistente en ello, por esto se evita el típico problema de: <em>¿Qué llave cierra qué cosa?</em>. HAML nos da este poder en HTML, por lo tanto, <strong>te olvidas de cerrar los tags</strong>, ¡Que maravilla!.</p>
 
-<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón, JSON, indentación forzada, no más tags de cierres. Todo esto converge en un template legible, ordenado y mantenible.</p>
+<p>Lo segundo es que los parámetros de los elementos se pasan en formato <em>JSON</em>. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón: JSON, indentación forzada, no más tags de cierres. Todo converge en un template legible, ordenado y mantenible.</p>
 
 <p>El tercer punto es que sigue un gran principio: <em>DRY, don&rsquo;t repeat yourself</em>. Antiguamente para diagramar sitios web se usaban tablas. Luego, con las hojas de estilo <em>CSS</em> todo lo anterior se transformaron en miles de <em>divs</em>, transformándose en el tag más repetido por lejos. ¿Te imaginas no tener que repetir esto mil veces? Adivina&hellip;</p>
 
@@ -150,7 +150,7 @@
     <link href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/"/>
     <updated>2013-12-23T23:25:31-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones</id>
-    <content type="html"><![CDATA[<h2>Getting things done</h2>
+    <content type="html"><![CDATA[<h1>Getting things done</h1>
 
 <p>Hace años que sigo la <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">filosofía GTD</a> gracias al conocido blog <a href="http://lifehacker.com/search?q=gtd">Lifehacker</a>. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:</p>
 
@@ -178,7 +178,7 @@ El primer y último punto son claves, el todo-list es tu amigo. Es fundamental p
 <!-- more -->
 
 
-<h3>La filosofía del hacer</h3>
+<h2>La filosofía del hacer</h2>
 
 <p>Tuve la oportunidad de participar en el programa <a href="http://www.techstars.com/program/locations/nyc/">TechStars, en NY</a>
 a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender muchísimo respecto a estas prácticas, alineadas con lo anterior y a otros paradigmas de los archiconocidos libros <a href="http://s3.amazonaws.com/37assets/svn/Rework-by-Jason-Fried-and-David-Heinemeier-Hansson-Excerpts.pdf">Rework</a> y <a href="http://theleanstartup.com/">The Lean Startup</a>.</p>
@@ -194,13 +194,13 @@ el tiempo en burocracia</strong>.</p>
 <p>El que pierde el tiempo quiebra, así de simple. ¿Por qué? porque no tienes o no alcanzas a tener producto y por ende tampoco resultados, por lo tanto, se acaban los recursos y tu negocio/idea/organización/proyecto fracasa. Todo lo que no implique estar generando resultados pierde sentido bajo esta visión, lo cual puede sonar obvio, pero en la práctica es fácil perder el foco.
 </span></p>
 
-<h3>¿Estás siendo efectivo?</h3>
+<h2>¿Estás siendo efectivo?</h2>
 
 <p>Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de <em>hacer cosas</em>, <em>resolver</em>, <em>Deliver</em>, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. <strong>¡Estar ocupado no es sinónimo de HACER!</strong>.</p>
 
-<h2>Reuniones</h2>
+<h1>Reuniones</h1>
 
-<h3>¿Nos juntamos en una hora más?</h3>
+<h2>¿Nos juntamos en una hora más?</h2>
 
 <p>Ahora bien, las reuniones nos alejan del <em>Deliver</em> pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle <em>el planificador de planificaciones</em> o más conocido como <em>el burócrata</em>.</p>
 
@@ -212,15 +212,15 @@ La base de este pensamiento proviene del hecho de que en una reunión se <em>hab
 <p>No hay nada peor que estar 2 horas en una reunión que podría haber durado 5 minutos, lo más lamentable es que usualmente pasa eso. En una reunión las personas tendemos a perder el hilo, divagar, bromear, contar anécdotas, etc. sobre todo en la cultura <em>chilensis</em> y para eso hay otras instancias.
 </span></p>
 
-<h3>El caso más dramático, la reunión periódica</h3>
+<h2>El caso más dramático, la reunión periódica</h2>
 
 <p>No hay nada peor que una reunión a la que estamos obligados a ir en forma periódica. Son dos los grandes motivos:</p>
 
-<h4>Esperando la reunión</h4>
+<h3>Esperando la reunión</h3>
 
 <p>Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, <strong>¡<a href="http://es.wikipedia.org/wiki/Principio_KISS">keep it simple</a>!</strong>.</p>
 
-<h4>Calentando el asiento</h4>
+<h3>Calentando el asiento</h3>
 
 <p>La reunión usualmente tiene un periodo de tiempo fijo. Si no tenemos nada que comentar, discutir o proponer, muchas veces la reunión se hace igual con temas intrascendentes, haciendo perder el tiempo a todos.</p>
 
@@ -240,7 +240,7 @@ Si estás en el poder de tomar una decisión sin requerir al resto, házlo y lue
 
 <p>Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero <strong>ejecuta rápido</strong>. Supongo que a esto se le llama <strong>Lean Management</strong>.</p>
 
-<h2>Concluyendo</h2>
+<h1>Concluyendo</h1>
 
 <p>Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, <em>debería ser relativamente breve, para no espantar al lector</em>, por lo tanto me quedo acá.</p>
 
@@ -261,7 +261,11 @@ Aún así, evita las reuniones, nos quitan tiempo importante que se puede invert
     <link href="http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente/"/>
     <updated>2013-12-21T01:25:29-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/21/programando-condicionales-legibles-o-como-hacer-un-if-decente</id>
-    <content type="html"><![CDATA[<h3>Los Condicionales</h3>
+    <content type="html"><![CDATA[<h1>TL;DR</h1>
+
+<p>Escribir un if es clave, hacerlo bien es absolutamente importante. Aquí hay algunos tips para ordenar las cosas.</p>
+
+<h1>Los Condicionales</h1>
 
 <p>En la vida del desarrollador es necesario definir muchos condicionales. Con
 <em>condicionales</em> nos refierimos a escribir un <em>if</em> en partes del código, lo cual
@@ -279,7 +283,7 @@ parecer son claves de considerar.</p>
 <!-- more -->
 
 
-<h3>Condiciones engorrosas</h3>
+<h1>Condiciones engorrosas</h1>
 
 <p>Ahora bien, ¿qué implica <em>buenos</em> o <em>malos</em> condicionales? Pongámoslo en un
 ejemplo, supongamos que queremos validar un formulario de registro y nos llega
@@ -385,7 +389,7 @@ de lo que hacemos al tener dos líneas cortas y claras.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Muchas validaciones</h3>
+<h1>Muchas validaciones</h1>
 
 <p>En ocasiones hay que validar muchas cosas para obtener un output concreto:
 Que el string contenga o no contenga algún parámetro, que sea de cierto tipo de
@@ -420,7 +424,7 @@ Tampoco cabe en la pantalla, por lo tanto estamos violando <a href="http://progr
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un <em>big calculation</em> dos veces.</p>
 
-<h4>Agrupando condiciones en variables boolean autoexplicativas</h4>
+<h2>Agrupando condiciones en variables boolean autoexplicativas</h2>
 
 <p>Una manera de simplificar la legibilidad de un set de condiciones es unirlas en
 variables boolean. Por ejemplo:</p>
@@ -591,7 +595,9 @@ mejor</em>.</p>
     <link href="http://decklord.github.io/blog/2013/12/09/configurando-github-pages-con-nic-dot-cl/"/>
     <updated>2013-12-09T11:03:03-03:00</updated>
     <id>http://decklord.github.io/blog/2013/12/09/configurando-github-pages-con-nic-dot-cl</id>
-    <content type="html"><![CDATA[<p>En estos minutos estoy intenando linkear mi dominio <a href="http://clopez.cl">http://clopez.cl</a>
+    <content type="html"><![CDATA[<h2>TL;DR</h2>
+
+<p>En estos minutos estoy intenando linkear mi dominio <a href="http://clopez.cl">http://clopez.cl</a>
 a <a href="http://pages.github.com/">GitHub Pages</a>.</p>
 
 <h2>Muerte a Tumblr</h2>
