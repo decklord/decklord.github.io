@@ -5,8 +5,10 @@ date: 2013-12-21 01:25:29 -0300
 comments: true
 categories: if else condicionales mantenibilidad
 ---
+#TL;DR
+Escribir un if es clave, hacerlo bien es absolutamente importante. Aquí hay algunos tips para ordenar las cosas.
 
-###Los Condicionales
+#Los Condicionales
 
 En la vida del desarrollador es necesario definir muchos condicionales. Con 
 *condicionales* nos refierimos a escribir un *if* en partes del código, lo cual
@@ -23,7 +25,7 @@ parecer son claves de considerar.
 
 <!-- more -->
 
-###Condiciones engorrosas
+#Condiciones engorrosas
 
 Ahora bien, ¿qué implica *buenos* o *malos* condicionales? Pongámoslo en un 
 ejemplo, supongamos que queremos validar un formulario de registro y nos llega 
@@ -104,7 +106,7 @@ de lo que hacemos al tener dos líneas cortas y claras.
     return re.match(regular_expression, text)
 {% endcodeblock %}
 
-###Muchas validaciones
+#Muchas validaciones
 
 En ocasiones hay que validar muchas cosas para obtener un output concreto: 
 Que el string contenga o no contenga algún parámetro, que sea de cierto tipo de 
@@ -131,7 +133,7 @@ Tampoco cabe en la pantalla, por lo tanto estamos violando [la regla de 80 carac
 Además se repiten cosas en las dos condiciones, solo la última parte es
 diferente, sumado a que estamos haciendo un *big calculation* dos veces.
 
-####Agrupando condiciones en variables boolean autoexplicativas
+##Agrupando condiciones en variables boolean autoexplicativas
 
 Una manera de simplificar la legibilidad de un set de condiciones es unirlas en 
 variables boolean. Por ejemplo:

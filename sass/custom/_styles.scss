@@ -139,19 +139,23 @@ a:hover {
     text-decoration: underline;
 }
 
+$img-border-radius : 0.3em;
+$img-shadow-color: rgba(0, 0, 0, 0.45);
+$img-box-shadow: 2px 2px 5px;
+
 article img {
-    -webkit-border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    -ms-border-radius: 0.3em;
-    -o-border-radius: 0.3em;
-    border-radius: 0.3em;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+    -webkit-border-radius: $img-border-radius;
+    -moz-border-radius: $img-border-radius;
+    -ms-border-radius: $img-border-radius;
+    -o-border-radius: $img-border-radius;
+    border-radius: $img-border-radius;
+    -webkit-box-shadow: $img-box-shadow;
+    -moz-box-shadow: $img-shadow-color $img-box-shadow;
+    box-shadow: $img-shadow-color $img-box-shadow;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: #fff 2.5em solid;
+    border: rgba(0, 0, 0, 0.5) 1px solid;
 }
 
 aside.sidebar a.stackoverflow {

@@ -7,6 +7,7 @@ categories: [nic.cl, githubpages, chile, octopress]
 publish: false
 ---
 
+##TL;DR
 En estos minutos estoy intenando linkear mi dominio http://clopez.cl
 a [GitHub Pages](http://pages.github.com/). 
 

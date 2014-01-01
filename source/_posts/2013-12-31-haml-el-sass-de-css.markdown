@@ -5,9 +5,9 @@ date: 2013-12-31 19:09:52 -0300
 comments: true
 categories: CSS HTML HAML HTML frontend
 ---
+![](/images/posts/2013_12_31.jpg)
 
 #TL;DR 
-######Too long, didn't read
 Si estás haciendo frontend usa HAML, no HTML, te cambiará la vida, lo prometo.
 
 #Les presento HAML
@@ -33,7 +33,7 @@ Mi primer resultado en [Google][4] fue [HAML][1] y vi la luz. Nativamente está 
 
 La syntaxis cambia brutalmente por tres razones. La primera es que **pythonizamos el HTML**. Una de las cosas geniales de Python es que no usa llaves, en su lugar el lenguaje te fuerza a seguir una indentación determinada y ser consistente en ello, por esto se evita el típico problema de: *¿Qué llave cierra qué cosa?*. HAML nos da este poder en HTML, por lo tanto, **te olvidas de cerrar los tags**, ¡Que maravilla!.
 
-Lo segundo es que los parámetros de los elementos se pasan en formato *JSON*. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón, JSON, indentación forzada, no más tags de cierres. Todo esto converge en un template legible, ordenado y mantenible.
+Lo segundo es que los parámetros de los elementos se pasan en formato *JSON*. Esto nos cierra el círculo de la consistencia, todo en lenguajes familiares que siguen un mismo patrón: JSON, indentación forzada, no más tags de cierres. Todo converge en un template legible, ordenado y mantenible.
 
 El tercer punto es que sigue un gran principio: *DRY, don't repeat yourself*. Antiguamente para diagramar sitios web se usaban tablas. Luego, con las hojas de estilo *CSS* todo lo anterior se transformaron en miles de *divs*, transformándose en el tag más repetido por lejos. ¿Te imaginas no tener que repetir esto mil veces? Adivina...
 

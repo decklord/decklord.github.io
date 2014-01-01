@@ -6,7 +6,7 @@ comments: true
 categories: management team-work meetings rework deliver lean startup kiss
 ---
 
-##Getting things done
+#Getting things done
 
 Hace años que sigo la [filosofía GTD][1] gracias al conocido blog [Lifehacker][2]. Hoy, gracias a eso, me organizo de manera natural siguiendo ciertas reglas de oro. Algunas que ahora se me vienen a la cabeza son:
 
@@ -38,7 +38,7 @@ Ahora bien, ¿Cómo se relaciona esto a las reuniones?
 ¿Por qué son **una pérdida de tiempo**?
 <!-- more -->
 
-###La filosofía del hacer
+##La filosofía del hacer
 
 Tuve la oportunidad de participar en el programa [TechStars, en NY][7]
 a principios de 2013. Ahí me tocó conocer gente de la cuál pude aprender muchísimo respecto a estas prácticas, alineadas con lo anterior y a otros paradigmas de los archiconocidos libros [Rework][8] y [The Lean Startup][9].
@@ -57,12 +57,12 @@ el tiempo en burocracia**.
 El que pierde el tiempo quiebra, así de simple. ¿Por qué? porque no tienes o no alcanzas a tener producto y por ende tampoco resultados, por lo tanto, se acaban los recursos y tu negocio/idea/organización/proyecto fracasa. Todo lo que no implique estar generando resultados pierde sentido bajo esta visión, lo cual puede sonar obvio, pero en la práctica es fácil perder el foco.
 {% endpullquote %}
 
-###¿Estás siendo efectivo?
+##¿Estás siendo efectivo?
 
 Estar ocupado no es suficiente. Adoptar prácticas como el todo-list ayudan a ser una persona efectiva a la hora de *hacer cosas*, *resolver*, *Deliver*, etc. pero es importante llegar a metas relevantes. Aquí hay una distinción importante, no sirve que te ocupes de muchas cosas cuando no hay ningún resultado. **¡Estar ocupado no es sinónimo de HACER!**.
 
-##Reuniones
-###¿Nos juntamos en una hora más?
+#Reuniones
+##¿Nos juntamos en una hora más?
 
 Ahora bien, las reuniones nos alejan del *Deliver* pues tienen una trampa: Nos hacen sentir ocupados, la falsa ilusión de avanzar, lo que nos lleva a un estereotipo al que me gusta llamarle *el planificador de planificaciones* o más conocido como *el burócrata*. 
 
@@ -76,16 +76,16 @@ La base de este pensamiento proviene del hecho de que en una reunión se *habla 
 {"No hay nada peor que estar 2 horas en una reunión que podría haber durado 5 minutos, lo más lamentable es que usualmente pasa eso."} En una reunión las personas tendemos a perder el hilo, divagar, bromear, contar anécdotas, etc. sobre todo en la cultura *chilensis* y para eso hay otras instancias.
 {% endpullquote %}
 
-###El caso más dramático, la reunión periódica
+##El caso más dramático, la reunión periódica
 
 No hay nada peor que una reunión a la que estamos obligados a ir en forma periódica. Son dos los grandes motivos:
 
-####Esperando la reunión
+###Esperando la reunión
 Como tenemos la reunión agendada, se espera a la reunión para tocar los temas importantes, a pesar de que eran para ayer. ¿Si no, de que hablaremos en la reunión? Si la reunión es un miércoles, habrá que esperar al próximo miércoles para tocar las cosas urgentes del jueves, viernes, lunes y martes. ¡Mal! No tengas la reunión, cierra y decide los asuntos de inmediato con las personas que corresponda en una conversación informal, **¡[keep it simple][11]!**.
 
 [11]: http://es.wikipedia.org/wiki/Principio_KISS
 
-####Calentando el asiento
+###Calentando el asiento
 La reunión usualmente tiene un periodo de tiempo fijo. Si no tenemos nada que comentar, discutir o proponer, muchas veces la reunión se hace igual con temas intrascendentes, haciendo perder el tiempo a todos.
 
 ###¿Cómo simplificar la burocracia?
@@ -103,7 +103,7 @@ Es mejor pedir perdón que pedir permiso.
 {% endblockquote %}
 Ejemplos de ésto es la delegación de tareas: Asigna. Comunica. Si alguien no esta de acuerdo, itera, pero **ejecuta rápido**. Supongo que a esto se le llama **Lean Management**.
 
-##Concluyendo
+#Concluyendo
 
 Creo que hay muchas más cosas que se pueden criticar a las reuniones, hay aún más preguntas que validar a la hora de pensar en proponer una, pero esto es un blog, *debería ser relativamente breve, para no espantar al lector*, por lo tanto me quedo acá.
 
