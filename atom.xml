@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2014-01-05T15:05:24-03:00</updated>
+  <updated>2014-01-05T16:22:12-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -81,7 +81,7 @@
 
 <p>Al leer los cambios te da una idea bastante clara de lo que hacías.</p>
 
-<p>El lado malo es que para esto hay que ser riguroso, estar haciendo <em>commits</em> contstantes es importante, de esta manera si pierdes tu código, no es mucho. Otro punto negativo es que es un poco lento leer cada archivo. Ésto se puede combinar con lo siguiente:</p>
+<p>El lado malo es que para esto hay que ser riguroso, estar haciendo <em>commits</em> contstantes es importante, de esta manera si pierdes tu código, no es mucho. Lo ideal es tener el hábito de hacer <a href="http://lucasr.org/2011/01/29/micro-commits/">micro-commits</a>. Otro punto negativo es que es un poco lento leer cada archivo. Ésto se puede combinar con lo siguiente:</p>
 
 <h3>Escribir una nota para tu yo del futuro</h3>
 
@@ -91,7 +91,7 @@
 
 <h1>Conclusiones</h1>
 
-<p>En la actualidad hay muchas formas de organizar en tareas, depende de cada uno que método resulta más efectivo, desde aplicaciones hasta un simple papel. Probablemente hay mecanismos que aún no conozco y que se salen del alcance de este humilde artículo.</p>
+<p>En la actualidad hay muchas formas de organizar el trabajo en tareas, depende de cada uno que método resulta más efectivo, desde aplicaciones hasta un simple papel. Probablemente hay mecanismos que aún no conozco y que se salen del alcance de este humilde artículo.</p>
 
 <p>Todo esto apunta a maximizar tu concentración lo antes posible para poder llegar a <em>tu tope de productividad</em>.</p>
 
