@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CSS | Camilo López A.]]></title>
   <link href="http://decklord.github.io/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2013-12-31T21:31:25-03:00</updated>
+  <updated>2014-01-05T12:48:53-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -137,7 +137,7 @@ Es equivalente a:
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&#39;text&#39;</span> <span class="na">name=</span><span class="s">&#39;dirty_text_field&#39;</span> <span class="nt">/&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h2>Anidando clases y ids</h2>
+<h2>Anidando clases e ids</h2>
 
 <p>Se pueden anidar clases o ids escribiéndolos uno tras otro, incluso con parámetros:
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

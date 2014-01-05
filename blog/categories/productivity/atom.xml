@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: productivity | Camilo López A.]]></title>
+  <link href="http://decklord.github.io/blog/categories/productivity/atom.xml" rel="self"/>
+  <link href="http://decklord.github.io/"/>
+  <updated>2014-01-05T12:48:53-03:00</updated>
+  <id>http://decklord.github.io/</id>
+  <author>
+    <name><![CDATA[Camilo López A.]]></name>
+    <email><![CDATA[camilo.lopez.a@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[¿Trabajas en muchas cosas y te cuesta retomar el hilo?]]></title>
+    <link href="http://decklord.github.io/blog/2014/01/05/manteniendo-un-todo-list/"/>
+    <updated>2014-01-05T10:56:32-03:00</updated>
+    <id>http://decklord.github.io/blog/2014/01/05/manteniendo-un-todo-list</id>
+    <content type="html"><![CDATA[<h1>TL;DR</h1>
+
+<p>Si trabajas en muchos proyectos, dispares entre sí, retomar el hilo conductor de una tarea específica toma tiempo. Mantener una lista de tareas que te permitan recordar que hacías la última vez que que trabajaste en algo puede ayudar. Además, una breve nota para ti mismo al final de la jornada ayuda a retomar el trabajo con fluidez a la mañana siguiente.</p>
+
+<!--more-->
+
+
+<h1>Dafuq I was doing yesterday</h1>
+
+<p>Los últimos meses he tenido mi cabeza ocupada con varios proyectos dispares. Aplicaciones <a href="https://itunes.apple.com/cl/app/siga-chile/id688969871?mt=8">para iOS como freelance</a>, hacer APIs, escribir en un Blog que nadie lee y unas cuantas aplicaciones web con <a href="https://www.djangoproject.com/">Django</a>.</p>
+
+<p>Cada vez que quiero retomar una de estas cosas, me cuesta recordar en lo que estaba trabajando en el minuto que me detuve. Eso complica las cosas, pues es difícil entrar en <a href="http://en.wikipedia.org/wiki/Flow_(psychology)">la zona</a> cuando no tienes idea de lo que hay que hacer. Más aún, cuando dejamos una tarea a la mitad o estámos trabajando en sólo un proyecto y éste es bastante complejo ocurre lo mismo.</p>
+
+<p>La idea de este post es llevarle la contra al dicho:</p>
+
+<p><blockquote><p>El que mucho abarca poco aprieta.</p></blockquote></p>
+
+<p>Claramente el tipo que lo inventó no sabía organizarse <em>:P</em>.</p>
+
+<h1>Las todo-list</h1>
+
+<p>En mi anterior post, <a href="/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/">El paradigma del hacer y el por qué evitar las reuniones</a> mencioné las <em>todo-list</em>. Manejar una pequeña lista de tareas ayuda mucho a llevar la pista de nuestro trabajo cuando cambiamos de contexto.</p>
+
+<p>Actualmente, existen mútiples formas de llevar <em>todo-list</em>, tanto personales como en equipo: Aplicaciones web, archivos de texto plano, plug-ins en editores de texto o simplemente papel y lápiz. A continuación voy a comentar brevemente el estado del arte en este campo a la fecha.</p>
+
+<h2>Aplicaciones</h2>
+
+<p>Acá nos encontramos con muchas alternativas para todo tipo de perfiles. Si eres fan de Gmail y te gusta la integración, una buena alternativa puede ser <a href="https://mail.google.com/mail/help/tasks/">Google Tasks</a> o el nuevo <a href="https://drive.google.com/keep/u/0/">Google Keep</a>. Otra que me gustaba hace varios años por su simplicidad es <a href="https://todoist.com/">Todoist</a>.</p>
+
+<p>Pasando a aplicaciones un poco mas robustas, tenemos <a href="http://www.rememberthemilk.com/">RememberTheMilk</a>, <a href="https://www.wunderlist.com/">Wunderlist</a>, <a href="https://evernote.com/">Evernote</a> y finalmente <a href="https://trello.com/">Trello</a> el administrador de proyectos genérico de los creadores de <a href="http://www.stackoverflow.com">StackOverflow</a>, que también mucha gente esta usando como <em>todo-list</em>.</p>
+
+<h2>¿Y para los hackers?</h2>
+
+<p>Perfecto, vamos por parte. Para los más hackers existen alternativas notables. Acá la cosa se pone más ruda.</p>
+
+<h3>Dropbox</h3>
+
+<p>Lo primero y quizás más simple: Sincroniza un <em>todo.txt</em> en <a href="http://www.dropbox.com">Dropbox</a>, si quieres llevarlo un paso más allá esta <a href="http://todotxt.com/">Todo.txt</a>.</p>
+
+<h3>Plugins en editores de texto</h3>
+
+<p>Como buen hacker tu mejor amigo es tu editor de texto, entonces, ¿qúe mejor que manejar el <em>todo-list</em> en mi editor? Si eres fan de <em>vi</em>, te puede interesar <a href="http://quicktask.aaronbieber.com/">Quicktask</a>, para <em>emacs</em> está disponible <a href="http://orgmode.org/">orgmode</a> y para <em>Sublime Text</em> esta el tremendo plugin <a href="https://github.com/aziz/PlainTasks">PlainTasks</a>, que se puede installar usando <a href="https://sublime.wbond.net/">Package Manager</a></p>
+
+<h3>Gist</h3>
+
+<p>Recientemente en <a href="https://news.ycombinator.com/">hackernews</a> estaba dando vueltas un artículo de <a href="http://carlsednaoui.com/post/70299468325/the-best-to-do-list-a-private-gist">Carl Sednaoui</a> sobre cómo usar un <a href="http://gist.github.com">Gist</a> como un efectivo <em>todo-list</em>. Vale la pena leerlo.</p>
+
+<h2>El problema de la todo-list y mis experimentos</h2>
+
+<p>A pesar de ser un usuario constante de las <em>todo-list</em> para ordenarme, a veces me quedo corto. Tener que llevar un control de todos los proyectos en los que me desenvuelvo a veces se pone caótico. A pesar de saber en qué tarea estoy trabajando, no se <em>exactamente</em> qué estaba haciendo.</p>
+
+<h3>Git diff</h3>
+
+<p>Para solucionar lo anterior, a la hora de programar, estoy intentando acostumbrarme a <em>no hacer commit en la última media hora de trabajo</em>. La idea es que a la mañana siguente puedes hacer:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git diff my_file
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Al leer los cambios te da una idea bastante clara de lo que hacías, sin embargo, para esto hay que ser riguroso, estar haciendo commits contstantes es importante, de esta manera si pierdes tu código, no es mucho. Otro punto negativo es que es un poco lento leer cada archivo. Esto se puede combinar con lo siguiente:</p>
+
+<h3>Escribir una nota para tu yo del futuro</h3>
+
+<h4>El método irreverente</h4>
+
+<p>Acá existen variaciones. Estoy probando con un archivo por proyecto que se llama <em>dafuq_i_was_doing_yesterday.txt</em>, lo mantengo en el <em>.gitignore</em> de mi proyecto. Acá escribo una nota sobre lo que estoy haciendo en los últimos 5 minutos <em>antes de irme o terminar de trabajar</em>. La gracia de esto último es que no necesitas programar nada, simplemente se puede hacer con una nota en un post-it o en un archivo de texto sincronizado con <em>Dropbox</em>. Junto con <em>git-diff</em> se vuelve el método más efectivo que he encontrado hasta el minuto para retomar un proyecto.</p>
+
+<h1>Conclusiones</h1>
+
+<p>En la actualidad hay muchas formas de organizar en tareas, depende de cada uno que método resulta más efectivo, desde aplicaciones hasta un simple papel, probablemente hay mecanismos que aún no conozco y que salen del alcance de este humilde artículo.</p>
+
+<p>Todo esto apunta a maximizar tu concentración lo antes posible para poder llegar a <em>tu tope de productividad</em>.</p>
+
+<p>Y tú estimado lector ¿qué métodos usas?</p>
+]]></content>
+  </entry>
+  
+</feed>
