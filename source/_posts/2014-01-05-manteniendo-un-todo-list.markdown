@@ -4,6 +4,7 @@ title: "¿Trabajas en muchas cosas y te cuesta retomar el hilo?"
 date: 2014-01-05 10:56:32 -0300
 comments: true
 categories: todo-list gtd productivity
+description: Si trabajas en muchos proyectos, dispares entre sí, retomar el hilo conductor de una tarea específica puede tomar tiempo.
 ---
 
 #TL;DR
