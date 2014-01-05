@@ -7,7 +7,9 @@ title: Camilo López A.
 subtitle: Mi blog de programación, management y finas hiervas seleccionadas.
 author: Camilo López A.
 simple_search: http://google.com/search
-description:
+description: "Blog sobre programación, managment y otros temas"
+keywords: "desarrollo software managment gtd productividad todo-list reuniones"
+image: http://www.clopez.cl/images/logo.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
