@@ -84,7 +84,7 @@ Es equivalente a:
 <input type='text' name='dirty_text_field' />
 {% endcodeblock %}
 
-##Anidando clases y ids
+##Anidando clases e ids
 
 Se pueden anidar clases o ids escribiéndolos uno tras otro, incluso con parámetros:
 {% codeblock lang:html %}
