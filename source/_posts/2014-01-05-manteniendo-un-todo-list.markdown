@@ -96,7 +96,9 @@ git diff my_file
 
 Al leer los cambios te da una idea bastante clara de lo que hacías. 
 
-El lado malo es que para esto hay que ser riguroso, estar haciendo *commits* contstantes es importante, de esta manera si pierdes tu código, no es mucho. Otro punto negativo es que es un poco lento leer cada archivo. Ésto se puede combinar con lo siguiente:
+El lado malo es que para esto hay que ser riguroso, estar haciendo *commits* contstantes es importante, de esta manera si pierdes tu código, no es mucho. Lo ideal es tener el hábito de hacer [micro-commits][22]. Otro punto negativo es que es un poco lento leer cada archivo. Ésto se puede combinar con lo siguiente:
+
+[22]: http://lucasr.org/2011/01/29/micro-commits/
 
 ### Escribir una nota para tu yo del futuro
 #### El método irreverente
@@ -105,7 +107,7 @@ Estoy probando con un archivo llamado *dafuq_i_was_doing_yesterday.txt* y que ma
 
 #Conclusiones
 
-En la actualidad hay muchas formas de organizar en tareas, depende de cada uno que método resulta más efectivo, desde aplicaciones hasta un simple papel. Probablemente hay mecanismos que aún no conozco y que se salen del alcance de este humilde artículo.
+En la actualidad hay muchas formas de organizar el trabajo en tareas, depende de cada uno que método resulta más efectivo, desde aplicaciones hasta un simple papel. Probablemente hay mecanismos que aún no conozco y que se salen del alcance de este humilde artículo.
 
 Todo esto apunta a maximizar tu concentración lo antes posible para poder llegar a *tu tope de productividad*.
 
