@@ -67,7 +67,7 @@ Lo primero y quizás más simple: Sincroniza un *todo.txt* en [Dropbox][11], si 
 
 ###Plugins en editores de texto
 
-Como buen hacker tu mejor amigo es tu editor de texto, por tanto, ¿qúe mejor que manejar el *todo-list* en mi editor? Si eres fan de *vi*, te puede interesar [Quicktask][13], para *emacs* está disponible [orgmode][14] y para *Sublime Text* esta el tremendo plugin [PlainTasks][15], que se puede installar usando [Package Manager][16]
+Como buen hacker tu mejor amigo es tu editor de texto, por tanto, ¿qúe mejor que manejar el *todo-list* en mi editor? Si eres fan de *vi*, te puede interesar [Quicktask][13], para *emacs* está disponible [orgmode][14] y para *Sublime Text* esta el tremendo plugin [PlainTasks][15], que se puede instalar usando [Package Manager][16]
 
 [13]: http://quicktask.aaronbieber.com/
 [14]: http://orgmode.org/

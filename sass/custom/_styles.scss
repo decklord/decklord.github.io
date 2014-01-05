@@ -158,6 +158,37 @@ article img {
     border: rgba(0, 0, 0, 0.5) 1px solid;
 }
 
+aside.sidebar img{
+    border: $dark-blue 0em solid;
+}
+
 aside.sidebar a.stackoverflow {
     white-space: normal;
+}
+
+.mailchimp {
+
+    input {
+        padding: 8px;
+        width: 85%;
+        -webkit-border-radius: $img-border-radius;
+        -moz-border-radius: $img-border-radius;
+        -ms-border-radius: $img-border-radius;
+        -o-border-radius: $img-border-radius;
+        border: 0px solid black;
+        font-size: 105%;
+        font-weight: bold;
+        color: $light-pink-red;
+    }
+
+    input[type="submit"]{
+        background-color: $calypso;
+        color: white;
+        width: 60%;
+    }
+
+    p {
+        font-size: 90%;
+        margin-bottom: 0.5em;
+    }
 }

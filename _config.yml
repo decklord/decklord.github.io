@@ -50,7 +50,7 @@ titlecase: false       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/social.html, asides/recent_posts.html, asides/github.html]
+default_asides: [asides/mailchimp.html, asides/social.html, asides/recent_posts.html, asides/github.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -93,6 +93,12 @@ googleplus_hidden: false
 # Pinboard
 pinboard_user:
 pinboard_count: 3
+
+# Mailchimp
+mailchimp : true
+mailchimp_list_name : Suscríbete a mi blog
+mailchimp_list_why : Recibe un resumen con los post de la semana
+mailchimp_embed_action : http://clopez.us3.list-manage1.com/subscribe/post?u=ea09a0053c01b240f6aa1cd0f&amp;id=40c34c49a7
 
 # Delicious
 delicious_user:
