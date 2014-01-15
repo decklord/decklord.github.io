@@ -17,6 +17,8 @@ El fracaso o el éxito son subjetivos, dependen de nuestro contexto cultural y s
 
 Un tema que me interesa mucho es el hecho de cómo el ser humano percibe la realidad y su propia vida. En esta ocasión  en especial lo aparentemente negativo.
 
+<!-- more -->
+
 Algo que me encanta es contar anécdotas. Disfruto siendo narrador y por eso transformo eventos, a veces simples, en un buen relato (o al menos eso intento).
 
 {% pullquote left %}
