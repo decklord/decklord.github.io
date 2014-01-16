@@ -5,13 +5,13 @@ date: 2014-01-15 08:15:35 -0300
 comments: true
 categories: Life Lessons
 keywords: productividad vida fracaso estado-mental exito
-description: El fracaso o el éxito son subjetivos, dependen de nuestro contexto cultural y son un estado mental personal. En realidad lo que importa es el camino, el apdendizaje detrás, no la meta en sí misma. Todo se reduce a aprender.
+description: El fallar es una situación que aparenta ser un lobo, pero en realidad es una oveja disfrazada. No hay que buscar el éxito, tampoco temer al fracaso. El verdadero foco es la experiencia.
 image: 
 ---
 
 #TL;DR
 
-El fracaso o el éxito son subjetivos, dependen de nuestro contexto cultural y son un estado mental personal. En realidad lo que importa es el camino, el aprendizaje implícito, no la meta en sí misma. Todo se reduce a aprender.
+El fracaso es una oveja con piel de lobo, es duro pero a la vez es una fuente inagotable de experiencia. Por otra parte, tener éxito o fallar son subjetivos, dependen de nuestro contexto cultural y son un estado mental personal. En realidad lo que importa es el camino, el aprendizaje implícito, no la meta en sí misma. Todo se reduce a aprender.
 
 #El aprendizaje del narrador
 
