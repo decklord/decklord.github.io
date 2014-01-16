@@ -77,7 +77,7 @@ El éxito se idealiza como una *meta alcanzable*, como una tortuga, cuando en ve
 #Concluyendo
 
 {% pullquote left %}
-Son los matices de grises lo importante. {"El fallar es una situación que aparenta ser un lobo, pero en realidad es una oveja disfrazada"}. Es difícil, pero en el fondo es una poderosa oportunidad de aprendizaje. La clave es como reaccionamos ante ésto. Es ahí donde reside la sabiduría. ¿reflexionamos o nos deprimimos?.
+Son los matices de grises lo importante. {"El fallar es una situación que aparenta ser un lobo, pero en realidad es una oveja disfrazada"}. Es difícil, pero en el fondo es una poderosa oportunidad de aprendizaje. La clave es como reaccionamos ante ésto. Es ahí donde reside la sabiduría. ¿reflexionamos o nos deprimimos?
 
 Cualquier meta de mediano o largo plazo pierde relevancia en el tiempo. Cumplir objetivos es simplemente un punto dentro de un largo camino. Dos tremendos ejercicios para ver las cosas en perspectiva cuando suceden verdaderas catástrofes en el presente es hacernos la pregunta: **¿Esto que me ha ocurrido hoy será relevante en 10 años más?** y la segunda **¿Puedo transformar esta calamidad en una gran historia que contar?**
 {% endpullquote %}
