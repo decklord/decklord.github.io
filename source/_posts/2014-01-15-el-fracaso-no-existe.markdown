@@ -15,7 +15,7 @@ El fracaso o el éxito son subjetivos, dependen de nuestro contexto cultural y s
 
 #El aprendizaje del narrador
 
-Un tema que me interesa mucho es el hecho de cómo el ser humano percibe la realidad y su propia vida. En esta ocasión quiero hablar de una persepción negativa: *El fracaso*.
+Un tema que me interesa mucho es el hecho de cómo el ser humano percibe la realidad y su propia vida. En esta ocasión quiero hablar de una percepción negativa: *El fracaso*.
 
 <!-- more -->
 
