@@ -4,7 +4,7 @@
   <title><![CDATA[Camilo López A.]]></title>
   <link href="http://decklord.github.io/atom.xml" rel="self"/>
   <link href="http://decklord.github.io/"/>
-  <updated>2014-01-16T11:30:14-03:00</updated>
+  <updated>2014-01-25T13:46:01-03:00</updated>
   <id>http://decklord.github.io/</id>
   <author>
     <name><![CDATA[Camilo López A.]]></name>
@@ -116,6 +116,8 @@ Son los matices de grises lo importante. El fallar es una situación que aparent
 
 <p>En mi anterior post, <a href="http://decklord.github.io/blog/2013/12/23/el-paradigma-del-hacer-y-el-por-que-evitar-las-reuniones/">El paradigma del hacer y el por qué evitar las reuniones</a> mencioné las <em>todo-list</em>. Manejar una pequeña lista de tareas ayuda mucho a llevar la pista de nuestro trabajo al cambiar de contexto.</p>
 
+<p>Hacer listas es una de las formas clásicas de organizar el trabajo y es clave a la hora de seguir el método <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">GTD</a>. Otra alternativa es el <a href="http://en.wikipedia.org/wiki/Kanban">Kanban</a>, pero no profundizaré en ésta metodología ahora para no extenderme en exceso.</p>
+
 <p>Actualmente, existen mútiples formas de llevar <em>todo-list</em>, tanto personales como en equipo: Aplicaciones web, archivos de texto plano, plug-ins en editores de texto o simplemente papel y lápiz. A continuación voy a comentar brevemente el estado del arte de este campo a la fecha.</p>
 
 <h2>Aplicaciones</h2>
@@ -123,6 +125,8 @@ Son los matices de grises lo importante. El fallar es una situación que aparent
 <p>Acá nos encontramos con muchas opciones para todo tipo de perfiles. Si eres fan de Gmail y te gusta la integración, una buena alternativa puede ser <a href="https://mail.google.com/mail/help/tasks/">Google Tasks</a> o el nuevo <a href="https://drive.google.com/keep/u/0/">Google Keep</a>. Otra que me gustaba hace varios años por su simplicidad es <a href="https://todoist.com/">Todoist</a>.</p>
 
 <p>Pasando a aplicaciones un poco mas robustas, tenemos <a href="http://www.rememberthemilk.com/">RememberTheMilk</a>, <a href="https://www.wunderlist.com/">Wunderlist</a>, <a href="https://evernote.com/">Evernote</a> y finalmente <a href="https://trello.com/">Trello</a> el administrador de proyectos genérico de los creadores de <a href="http://www.stackoverflow.com">StackOverflow</a>, que también mucha gente esta usando como <em>todo-list</em>.</p>
+
+<p>En particular para iOS existen varias apps interesantes. En los comentarios de este post se han mencionado varias: <a href="https://itunes.apple.com/en/app/paperless-lists-+-checklists/id359564368?mt=8">Paperless</a>, para listas de todo tipo, no solo de productividad. De pago tenemos <a href="http://culturedcode.com/things/">Things</a>, una app de mac/iOS para llevar <em>todos</em> con un diseño y usabilidad excelente. Gracias a Mario y a Thomas Fruin por las sugerencias.</p>
 
 <h2>¿Y para los hackers?</h2>
 
@@ -135,6 +139,10 @@ Son los matices de grises lo importante. El fallar es una situación que aparent
 <h3>Plugins en editores de texto</h3>
 
 <p>Como buen hacker tu mejor amigo es tu editor de texto, por tanto, ¿qúe mejor que manejar el <em>todo-list</em> en mi editor? Si eres fan de <em>vi</em>, te puede interesar <a href="http://quicktask.aaronbieber.com/">Quicktask</a>, para <em>emacs</em> está disponible <a href="http://orgmode.org/">orgmode</a> y para <em>Sublime Text</em> esta el tremendo plugin <a href="https://github.com/aziz/PlainTasks">PlainTasks</a>, que se puede instalar usando <a href="https://sublime.wbond.net/">Package Manager</a></p>
+
+<h4>Directo en la consola</h4>
+
+<p>En los comentarios, Rodrigo Campos suguiere la utilización de <a href="http://taskwarrior.org/">Task Warrior</a> y <a href="http://stevelosh.com/projects/t/">T</a>.</p>
 
 <h3>Gist</h3>
 
